@@ -1,0 +1,19 @@
+{
+  "name": "hit-parade-react",
+  "version": "1.0.0",
+  "description": "Onja Capstone project about React + React Router + Context",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mickaellah/hit-parade-react.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mickaellah/hit-parade-react/issues"
+  },
+  "homepage": "https://github.com/Mickaellah/hit-parade-react#readme"
+}
