@@ -1,6 +1,6 @@
 const SongList = [
     {
-        songTitle: 'Avelao',
+        title: 'Avelao',
         singer: 'Chantal',
         style: 'slow',
         isFavorited: false,
@@ -10,7 +10,7 @@ const SongList = [
         id: Date.now()
     },
     {
-        songTitle: 'Feno anao',
+        title: 'Feno anao',
         singer: 'Marion',
         style: 'slow',
         isFavorited: true,
@@ -20,7 +20,7 @@ const SongList = [
         id: Date.now()
     },
     {
-        songTitle: 'Bavy',
+        title: 'Bavy',
         singer: 'Mr Sayd',
         style: 'rock',
         isFavorited: true,
@@ -30,7 +30,7 @@ const SongList = [
         id: Date.now()
     },
     {
-        songTitle: 'Inty Ray',
+        title: 'Inty Ray',
         singer: 'Myrindra',
         style: 'slow',
         isFavorited: false,
