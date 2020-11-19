@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/Mickaellah/hit-parade-react/issues"
   },
-  "homepage": "https://github.com/Mickaellah/hit-parade-react#readme"
+  "homepage": "https://github.com/Mickaellah/hit-parade-react#readme",
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0"
+  }
 }
