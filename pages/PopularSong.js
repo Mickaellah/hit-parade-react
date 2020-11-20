@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {useContext} from 'react';
 
-import songs from '../SongsData.json';
+import {Context} from '../Context';
 
 import favoriteOutline from '../svg/favorite_border-24px.svg';
 import favorite from '../svg/favorite-24px.svg';
@@ -11,9 +11,11 @@ import downArrow from "../svg/arrow_downward-24px.svg";
 import lyrics from '../svg/lyrics.svg';
 
 export default function PopularSong() {
+    const context = useContext(Context);
+    console.log(context.songs);
     return (
         <main>
-            {songs.map((song) => {
+            {context.songs.map((song) => {
                 return (
                     <article key={song.id} className="song_cart">
                         <div>

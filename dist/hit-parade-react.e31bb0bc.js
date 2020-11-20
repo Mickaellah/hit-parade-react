@@ -33911,18 +33911,52 @@ function Header() {
   }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     className: "link",
     to: "/"
-  }, "Popular songs"), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+  }, "\uD83D\uDD25 Popular songs"), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     className: "link",
     to: "/styles"
-  }, "Styles"), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+  }, "\uD83D\uDC97 Styles"), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     className: "link",
     to: "/add"
-  }, "Add"), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+  }, "\uD83D\uDE03 Add"), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     className: "link",
     to: "/cart"
-  }, "Cart")));
+  }, "\uD83D\uDEC1 Cart")));
 }
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"svg/favorite_border-24px.svg":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"Context.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.ContextProvider = ContextProvider;
+exports.Context = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _SongsData = _interopRequireDefault(require("./SongsData.json"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+const Context = _react.default.createContext();
+
+exports.Context = Context;
+
+function ContextProvider(props) {
+  const [songs, setSongs] = (0, _react.useState)([]);
+  (0, _react.useEffect)(() => {
+    setSongs(_SongsData.default);
+  }, []);
+  return /*#__PURE__*/_react.default.createElement(Context.Provider, {
+    value: {
+      songs
+    }
+  }, props.children);
+}
+},{"react":"node_modules/react/index.js","./SongsData.json":"SongsData.json"}],"svg/favorite_border-24px.svg":[function(require,module,exports) {
 module.exports = "/favorite_border-24px.d5915d2c.svg";
 },{}],"svg/favorite-24px.svg":[function(require,module,exports) {
 module.exports = "/favorite-24px.fee10fb4.svg";
@@ -33944,9 +33978,9 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = PopularSong;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = _interopRequireWildcard(require("react"));
 
-var _SongsData = _interopRequireDefault(require("../SongsData.json"));
+var _Context = require("../Context");
 
 var _favorite_border24px = _interopRequireDefault(require("../svg/favorite_border-24px.svg"));
 
@@ -33964,8 +33998,14 @@ var _lyrics = _interopRequireDefault(require("../svg/lyrics.svg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 function PopularSong() {
-  return /*#__PURE__*/_react.default.createElement("main", null, _SongsData.default.map(song => {
+  const context = (0, _react.useContext)(_Context.Context);
+  console.log(context.songs);
+  return /*#__PURE__*/_react.default.createElement("main", null, context.songs.map(song => {
     return /*#__PURE__*/_react.default.createElement("article", {
       key: song.id,
       className: "song_cart"
@@ -34002,7 +34042,7 @@ function PopularSong() {
     })));
   }));
 }
-},{"react":"node_modules/react/index.js","../SongsData.json":"SongsData.json","../svg/favorite_border-24px.svg":"svg/favorite_border-24px.svg","../svg/favorite-24px.svg":"svg/favorite-24px.svg","../svg/shopping_cart-24px (1).svg":"svg/shopping_cart-24px (1).svg","../svg/shopping_cart-24px.svg":"svg/shopping_cart-24px.svg","../svg/arrow_upward-24px.svg":"svg/arrow_upward-24px.svg","../svg/arrow_downward-24px.svg":"svg/arrow_downward-24px.svg","../svg/lyrics.svg":"svg/lyrics.svg"}],"svg/headset-24px.svg":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../Context":"Context.js","../svg/favorite_border-24px.svg":"svg/favorite_border-24px.svg","../svg/favorite-24px.svg":"svg/favorite-24px.svg","../svg/shopping_cart-24px (1).svg":"svg/shopping_cart-24px (1).svg","../svg/shopping_cart-24px.svg":"svg/shopping_cart-24px.svg","../svg/arrow_upward-24px.svg":"svg/arrow_upward-24px.svg","../svg/arrow_downward-24px.svg":"svg/arrow_downward-24px.svg","../svg/lyrics.svg":"svg/lyrics.svg"}],"svg/headset-24px.svg":[function(require,module,exports) {
 module.exports = "/headset-24px.898884ab.svg";
 },{}],"pages/Styles.js":[function(require,module,exports) {
 "use strict";
@@ -34012,16 +34052,21 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = Styles;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = _interopRequireWildcard(require("react"));
 
-var _SongsData = _interopRequireDefault(require("../SongsData.json"));
+var _Context = require("../Context");
 
 var _headset24px = _interopRequireDefault(require("../svg/headset-24px.svg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 function Styles() {
-  return /*#__PURE__*/_react.default.createElement("div", null, _SongsData.default.map(song => {
+  const context = (0, _react.useContext)(_Context.Context);
+  return /*#__PURE__*/_react.default.createElement("div", null, context.songs.map(song => {
     return /*#__PURE__*/_react.default.createElement("header", {
       className: "styles",
       key: song.id
@@ -34033,7 +34078,7 @@ function Styles() {
     }, song.style));
   }));
 }
-},{"react":"node_modules/react/index.js","../SongsData.json":"SongsData.json","../svg/headset-24px.svg":"svg/headset-24px.svg"}],"pages/Add.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../Context":"Context.js","../svg/headset-24px.svg":"svg/headset-24px.svg"}],"pages/Add.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34173,10 +34218,12 @@ var _reactDom = _interopRequireDefault(require("react-dom"));
 
 var _App = _interopRequireDefault(require("./App"));
 
+var _Context = require("./Context");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_reactDom.default.render( /*#__PURE__*/_react.default.createElement(_App.default, null), document.getElementById('root'));
-},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./App":"App.js"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+_reactDom.default.render( /*#__PURE__*/_react.default.createElement(_Context.ContextProvider, null, /*#__PURE__*/_react.default.createElement(_App.default, null)), document.getElementById('root'));
+},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./App":"App.js","./Context":"Context.js"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -34204,7 +34251,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58119" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60332" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

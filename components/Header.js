@@ -9,16 +9,16 @@ export default function Header() {
             </h1>
             <div className="pages">
                 <Link className="link" to="/">
-                    Popular songs
+                    🔥 Popular songs
                 </Link>
                 <Link className="link" to="/styles">
-                    Styles
+                    💗 Styles
                 </Link>
                 <Link className="link" to="/add">
-                    Add
+                    😃 Add
                 </Link>
                 <Link className="link" to="/cart">
-                    Cart
+                    🛁 Cart
                 </Link>
             </div>
         </header>

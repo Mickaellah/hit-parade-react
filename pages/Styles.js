@@ -1,11 +1,12 @@
-import React from 'react'
+import React, {useContext} from 'react'
 
-import songs from '../SongsData.json';
+import {Context} from '../Context';
 import Headset from '../svg/headset-24px.svg';
 export default function Styles() {
+    const context = useContext(Context);
     return (
         <div>
-            {songs.map((song) => {
+            {context.songs.map((song) => {
                 return (
                     <header className="styles" key={song.id}>
                         <img src={Headset} alt="Head set" />
