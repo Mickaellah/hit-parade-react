@@ -23,6 +23,15 @@ h1 {
     font-size: 24px;
 }
 
+.link_cart {
+    display: flex;
+    margin-block-start: -16px;
+}
+
+.link_cart > p {
+    margin-inline-start: 16px;
+}
+
 .heading {
     margin: 0;
 }
@@ -109,4 +118,12 @@ textarea {
     border-radius: 8px;
     background-color: orange;
     box-shadow: 2px 3px 3px gray;
+}
+
+.upVotes_bttn,
+.downVotes_bttn {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    margin-inline-start: 16px;
 }

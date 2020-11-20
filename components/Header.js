@@ -1,6 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
+import ShoppingCart from '../svg/shopping_cart-24px.svg';
+
 export default function Header() {
     return (
         <header>
@@ -17,8 +19,9 @@ export default function Header() {
                 <Link className="link" to="/add">
                     😃 Add
                 </Link>
-                <Link className="link" to="/cart">
-                    🛁 Cart
+                <Link className="link link_cart" to="/cart">
+                    <img src={ShoppingCart} alt="Shopping cart" />
+                    <p>Cart</p> 
                 </Link>
             </div>
         </header>

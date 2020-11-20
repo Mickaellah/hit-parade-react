@@ -1,6 +1,7 @@
 import React, {useContext} from 'react';
 
 import {Context} from '../Context';
+import {Link} from 'react-router-dom';
 
 import favoriteOutline from '../svg/favorite_border-24px.svg';
 import favorite from '../svg/favorite-24px.svg';
@@ -12,10 +13,11 @@ import lyrics from '../svg/lyrics.svg';
 
 export default function PopularSong() {
     const context = useContext(Context);
-    console.log(context.songs);
+    const {upVotesIncreament, downVotesIncreament} = useContext(Context);
+    const lsSongs = context.sortedSong;
     return (
         <main>
-            {context.songs.map((song) => {
+            {lsSongs.map((song) => {
                 return (
                     <article key={song.id} className="song_cart">
                         <div>
@@ -32,18 +34,44 @@ export default function PopularSong() {
                         <div className="voting">
                             <div className="up_votes">
                                 <span>{song.upVotes}</span>
-                                <img className="up_votes_icon" src={arrowUp} alt="Upvotes" />
+                                <button 
+                                    className="upVotes_bttn" 
+                                    id={song.id} 
+                                    onClick={(e) => upVotesIncreament(e)}
+                                >
+                                    <img 
+                                        id={song.id} 
+                                        className="up_votes_icon" 
+                                        src={arrowUp} 
+                                        alt="Upvotes" 
+                                    />
+                                </button>
                             </div>
                             <div className="down_votes">
                                 <span>{song.downVotes}</span>
-                                <img className="down_votes_icon" src={downArrow} alt="Downvotes" />
+                                <button 
+                                    className="downVotes_bttn" 
+                                    onClick={(e) => downVotesIncreament(e)} 
+                                    id={song.id}
+                                >
+                                    <img 
+                                        id={song.id} 
+                                        className="down_votes_icon" 
+                                        src={downArrow} 
+                                        alt="Downvotes" 
+                                    />
+                                </button>
                             </div>
                         </div>
                         <div>
-                            <img src={shoppingCartOutline} alt="shopping cart" />
+                            <Link to="/cart">
+                                <img src={shoppingCartOutline} alt="shopping cart" />
+                            </Link>
                         </div>
                         <div>
-                            <img src={lyrics} alt="song lyrics" />
+                            <Link to="/lyrics">
+                                <img src={lyrics} alt="song lyrics" />
+                            </Link>
                         </div>
                     </article>
                 )
