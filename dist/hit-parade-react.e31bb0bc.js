@@ -29799,53 +29799,59 @@ function Header() {
     className: "list_item"
   }, "Cart"))));
 }
-},{"react":"node_modules/react/index.js"}],"SongsData.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-const SongList = [{
-  title: 'Avelao',
-  singer: 'Chantal',
-  style: 'slow',
-  isFavorited: false,
-  upVotes: 15,
-  downVotes: 13,
-  lyrics: `1. Nahatsiaro marary ianao nilaozany Nitondra ny mangidy ianao fa... Tsy tsapany hoe ianao no tena Tia azy Naleony nitady Vaovao... Ny rehetra rehetra efa nafoinao ho azy; Hatramin'izay sarobidy indrindra. Hanenina ihany izy any aorina any Hiverina eo hitady anao indray   REF : Avelao izy handeha Hanalavitra anao any Aza miaritra tomany Fa tsofy rano izy Ataovy an-tsaina hoe Ny tia anao tsy izy irery ihany Fa mbola betsaka any ho any Afaka hitia anao mandrakizay 2. Izy ihany no tompon-tsafidy Ianao tsy afaka hanery azy handidy Manorata tantara Vaovao Eo anilan'ilay tena tia anao ho mandrakizay. Dia tsy ho latsaka intsony ranomasonao Fa fianam-baovao lavitry ny alahelo Ka fafao ny ranomasonao Izy iny anie tsy anjaranao! REF : Avelao izy handeha Hanalavitra anao any Aza miaritra tomany Fa tsofy rano izy Ataovy an-tsaina hoe Ny tia anao tsy izy irery ihany Fa mbola betsaka any ho any Afaka hitia anao mandrakizay Avelao izy handeha (3) Avelao (Fa tsy tia anao intsony) REF : Avelao izy handeha Hanalavitra anao any Aza miaritra tomany Fa tsofy rano izy Ataovy an-tsaina hoe Ny tia anao tsy izy irery ihany Fa mbola betsaka any ho any Afaka hitia anao mandrakizay`,
-  id: Date.now()
+},{"react":"node_modules/react/index.js"}],"SongsData.json":[function(require,module,exports) {
+module.exports = [{
+  "title": "Avelao",
+  "singer": "Chantal",
+  "style": "slow",
+  "isFavorited": false,
+  "upVotes": 15,
+  "downVotes": 13,
+  "lyrics": "Nahatsiaro marary ianao nilaozany Nitondra ny mangidy ianao fa... Tsy tsapany hoe ianao no tena Tia azy Naleony nitady Vaovao... Ny rehetra rehetra efa nafoinao ho azy; Hatramin'izay sarobidy indrindra. Hanenina ihany izy any aorina any Hiverina eo hitady anao indray   REF : Avelao izy handeha Hanalavitra anao any Aza miaritra tomany Fa tsofy rano izy Ataovy an-tsaina hoe Ny tia anao tsy izy irery ihany Fa mbola betsaka any ho any Afaka hitia anao mandrakizay 2. Izy ihany no tompon-tsafidy Ianao tsy afaka hanery azy handidy Manorata tantara Vaovao Eo anilan'ilay tena tia anao ho mandrakizay. Dia tsy ho latsaka intsony ranomasonao Fa fianam-baovao lavitry ny alahelo Ka fafao ny ranomasonao Izy iny anie tsy anjaranao! REF : Avelao izy handeha Hanalavitra anao any Aza miaritra tomany Fa tsofy rano izy Ataovy an-tsaina hoe Ny tia anao tsy izy irery ihany Fa mbola betsaka any ho any Afaka hitia anao mandrakizay Avelao izy handeha (3) Avelao (Fa tsy tia anao intsony) REF : Avelao izy handeha Hanalavitra anao any Aza miaritra tomany Fa tsofy rano izy Ataovy an-tsaina hoe Ny tia anao tsy izy irery ihany Fa mbola betsaka any ho any Afaka hitia anao mandrakizay",
+  "id": "1605846105310"
 }, {
-  title: 'Feno anao',
-  singer: 'Marion',
-  style: 'slow',
-  isFavorited: true,
-  upVotes: 23,
-  downVotes: 6,
-  lyrics: `Toa tsy mety mitony, ny ao anatiko ao Te hilaza aminao, nefa miahotr’aho Njao mientana ny fo, manoloana anao Na ny mora indrindra aza, lasa sarotra Matokia foana ihany kanefa aza manahy Aleo hibitsika mangina ny ao antiko ao Efa feno anao, 'zao tontolo rehetra izao Fa raha tsy eo ianao, toa tsy mety izay atao Anio raha sitrakao, tsorina eto indray Ho anao, ho anao,ho anao Ny foko anjakao Ny efa vita taloha, misy ho visavisaina Ny anio, lay fitia vaovao ndray no andrandraina Samy tia tao am-po, miandry ny maraina Efa fiainana vaovao manombok’eto ataovy an-tsaina Matokia foana ihany kanefa aza manahy Aleo hibitsika mangina ny ao antiko ao Efa feno anao, 'zao tontolo rehetra izao Fa raha tsy eo ianao, toa tsy mety izay atao Anio raha sitrakao, tsorina eto indray Ho anao, ho anao,ho anao Ny foko anjakao Ny mpanenjika, tsy tia ho romotra tsy maintsy hiteny Ho avy ny andro ratsy ho resintsika ireny Efa feno anao, 'Zao ny tontolo rehetra izao Fa raha tsy eo ianao, toa tsy mety izay atao Anio raha sitrakao, tsorina eto indray Ho anao, ho anao,ho anao ny foko anjakao https://tononkira.serasera.org/hira/marion/feno-anao-1 Tsiky dia ampy`,
-  id: Date.now()
+  "title": "Feno anao",
+  "singer": "Marion",
+  "style": "slow",
+  "isFavorited": true,
+  "upVotes": 23,
+  "downVotes": 6,
+  "lyrics": "Toa tsy mety mitony, ny ao anatiko ao Te hilaza aminao, nefa miahotr’aho Njao mientana ny fo, manoloana anao Na ny mora indrindra aza, lasa sarotra Matokia foana ihany kanefa aza manahy Aleo hibitsika mangina ny ao antiko ao Efa feno anao, 'zao tontolo rehetra izao Fa raha tsy eo ianao, toa tsy mety izay atao Anio raha sitrakao, tsorina eto indray Ho anao, ho anao,ho anao Ny foko anjakao Ny efa vita taloha, misy ho visavisaina Ny anio, lay fitia vaovao ndray no andrandraina Samy tia tao am-po, miandry ny maraina Efa fiainana vaovao manombok’eto ataovy an-tsaina Matokia foana ihany kanefa aza manahy Aleo hibitsika mangina ny ao antiko ao Efa feno anao, 'zao tontolo rehetra izao Fa raha tsy eo ianao, toa tsy mety izay atao Anio raha sitrakao, tsorina eto indray Ho anao, ho anao,ho anao Ny foko anjakao Ny mpanenjika, tsy tia ho romotra tsy maintsy hiteny Ho avy ny andro ratsy ho resintsika ireny Efa feno anao, 'Zao ny tontolo rehetra izao Fa raha tsy eo ianao, toa tsy mety izay atao Anio raha sitrakao, tsorina eto indray Ho anao, ho anao,ho anao ny foko anjakao",
+  "id": "1605846029600"
 }, {
-  title: 'Bavy',
-  singer: 'Mr Sayd',
-  style: 'rock',
-  isFavorited: true,
-  upVotes: 9,
-  downVotes: 2,
-  lyrics: `Na tsy nilaza ianao oa efa fantatro Efa tsapako Efa takatro Sipa ianao fa za koa anie oa Mec e Mbola hoavy ny anjara fa aza maika e Fa tsy ny fotsy no forcenao ho mainty e Ouzy ny atagny atagnana hoe Tsa mety e Marina hoe mandeha ny mandeha ... Mandeha Ny accelerateur anao lasa manitsaka be Asivo retrograde ... Sipa anie enao fa tsy bandy Sprinter mavesatra ary mivarina any ankady e Raisiko ho toy ny anabavy... Hanaovako azafady Mba mananatra anao za fa tsy hoe mavandy Oh bavy e...oh bavy e...oh bavy e Sao tifiriny eny ampanidinana eny e Fa milalao flesy doro akia ny jiolamboto amzao Oh mba fahotana mafaty anie ry Neny e Sao hienjera avy eny ambony be ka haratra eo ianao Fomban'ny jiolahimboto ny mody mitomany Tsy fantatrao izay tena any antsainy any Raha vao ianao manaiky mitsilany D'efa sakafo any anaty vilaniny a Kozy e Mivantana lay kozy fa mamelà Kopy agamba bavy fa zah lehilahy Zay mankarary anao dia lasa mamely ahy Mandehana moramora neny a Fefa nahita fiainana ny zokinao ye Raha zay fahafinaretana tsy avoky anao ya Ataovy tsara hidy aloha ny bokinao ye Tsy tranombokimpirenena akory ny vatanao ya Tiako ianao any aoriana anambady e Fa tsy hitomany dia anozona bandy e Tiako ianao ho fitaratr'ireo zandry Hoe tsy mba nahafaty antoka ny niandry Ny adalan'ny hafa no iomehazana Fa ny adalan'ny tena tafiana lamba Oh bavy e...oh bavy e...oh bavy e Sao tifiriny eny ampanidinana eny e Fa milalao flesy doro akia ny jiolamboto amzao Oh mba fahotana mafaty anie ry Neny e Sao hienjera avy eny ambony be ka haratra eo ianao https://tononkira.serasera.org/hira/mr-sayda-misi-sayda/bavy Tsiky dia ampy`,
-  id: Date.now()
+  "title": "Bavy",
+  "singer": "Mr Sayd",
+  "style": "rock",
+  "isFavorited": true,
+  "upVotes": 9,
+  "downVotes": 2,
+  "lyrics": "Na tsy nilaza ianao oa efa fantatro Efa tsapako Efa takatro Sipa ianao fa za koa anie oa Mec e Mbola hoavy ny anjara fa aza maika e Fa tsy ny fotsy no forcenao ho mainty e Ouzy ny atagny atagnana hoe Tsa mety e Marina hoe mandeha ny mandeha ... Mandeha Ny accelerateur anao lasa manitsaka be Asivo retrograde ... Sipa anie enao fa tsy bandy Sprinter mavesatra ary mivarina any ankady e Raisiko ho toy ny anabavy... Hanaovako azafady Mba mananatra anao za fa tsy hoe mavandy Oh bavy e...oh bavy e...oh bavy e Sao tifiriny eny ampanidinana eny e Fa milalao flesy doro akia ny jiolamboto amzao Oh mba fahotana mafaty anie ry Neny e Sao hienjera avy eny ambony be ka haratra eo ianao Fomban'ny jiolahimboto ny mody mitomany Tsy fantatrao izay tena any antsainy any Raha vao ianao manaiky mitsilany D'efa sakafo any anaty vilaniny a Kozy e Mivantana lay kozy fa mamelà Kopy agamba bavy fa zah lehilahy Zay mankarary anao dia lasa mamely ahy Mandehana moramora neny a Fefa nahita fiainana ny zokinao ye Raha zay fahafinaretana tsy avoky anao ya Ataovy tsara hidy aloha ny bokinao ye Tsy tranombokimpirenena akory ny vatanao ya Tiako ianao any aoriana anambady e Fa tsy hitomany dia anozona bandy e Tiako ianao ho fitaratr'ireo zandry Hoe tsy mba nahafaty antoka ny niandry Ny adalan'ny hafa no iomehazana Fa ny adalan'ny tena tafiana lamba Oh bavy e...oh bavy e...oh bavy e Sao tifiriny eny ampanidinana eny e Fa milalao flesy doro akia ny jiolamboto amzao Oh mba fahotana mafaty anie ry Neny e Sao hienjera avy eny ambony be ka haratra eo ianao",
+  "id": "1605846031136"
 }, {
-  title: 'Inty Ray',
-  singer: 'Myrindra',
-  style: 'slow',
-  isFavorited: false,
-  upVotes: 50,
-  downVotes: 21,
-  lyrics: '',
-  id: Date.now()
+  "title": "Inty Ray",
+  "singer": "Myrindra",
+  "style": "slow",
+  "isFavorited": false,
+  "upVotes": 50,
+  "downVotes": 21,
+  "lyrics": "",
+  "id": "1605846002717"
 }];
-var _default = SongList;
-exports.default = _default;
-},{}],"App.js":[function(require,module,exports) {
+},{}],"svg/favorite_border-24px.svg":[function(require,module,exports) {
+module.exports = "/favorite_border-24px.d5915d2c.svg";
+},{}],"svg/favorite-24px.svg":[function(require,module,exports) {
+module.exports = "/favorite-24px.fee10fb4.svg";
+},{}],"svg/shopping_cart-24px (1).svg":[function(require,module,exports) {
+module.exports = "/shopping_cart-24px (1).9b6e22e2.svg";
+},{}],"svg/shopping_cart-24px.svg":[function(require,module,exports) {
+module.exports = "/shopping_cart-24px.d1303fd9.svg";
+},{}],"svg/arrow_upward-24px.svg":[function(require,module,exports) {
+module.exports = "/arrow_upward-24px.abfba325.svg";
+},{}],"svg/arrow_downward-24px.svg":[function(require,module,exports) {
+module.exports = "/arrow_downward-24px.ee6a6e28.svg";
+},{}],"svg/lyrics.svg":[function(require,module,exports) {
+module.exports = "/lyrics.1497dd2a.svg";
+},{}],"components/Main.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -29853,41 +29859,90 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _react = _interopRequireWildcard(require("react"));
+var _react = _interopRequireDefault(require("react"));
 
-var _Header = _interopRequireDefault(require("./components/Header"));
+var _SongsData = _interopRequireDefault(require("../SongsData.json"));
 
-var _SongsData = _interopRequireDefault(require("./SongsData"));
+var _favorite_border24px = _interopRequireDefault(require("../svg/favorite_border-24px.svg"));
+
+var _favorite24px = _interopRequireDefault(require("../svg/favorite-24px.svg"));
+
+var _shopping_cart24px = _interopRequireDefault(require("../svg/shopping_cart-24px (1).svg"));
+
+var _shopping_cart24px2 = _interopRequireDefault(require("../svg/shopping_cart-24px.svg"));
+
+var _arrow_upward24px = _interopRequireDefault(require("../svg/arrow_upward-24px.svg"));
+
+var _arrow_downward24px = _interopRequireDefault(require("../svg/arrow_downward-24px.svg"));
+
+var _lyrics = _interopRequireDefault(require("../svg/lyrics.svg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+function Main() {
+  return /*#__PURE__*/_react.default.createElement("main", null, _SongsData.default.map(song => {
+    return /*#__PURE__*/_react.default.createElement("article", {
+      key: song.id,
+      className: "song_cart"
+    }, /*#__PURE__*/_react.default.createElement("div", null, song.isFavorited === true ? /*#__PURE__*/_react.default.createElement("img", {
+      src: _favorite24px.default,
+      alt: "favorited"
+    }) : /*#__PURE__*/_react.default.createElement("img", {
+      src: _favorite_border24px.default,
+      alt: "not favorited"
+    })), /*#__PURE__*/_react.default.createElement("header", {
+      className: "header"
+    }, /*#__PURE__*/_react.default.createElement("h2", {
+      className: "heading"
+    }, song.title), /*#__PURE__*/_react.default.createElement("p", null, song.singer)), /*#__PURE__*/_react.default.createElement("div", {
+      className: "voting"
+    }, /*#__PURE__*/_react.default.createElement("div", {
+      className: "up_votes"
+    }, /*#__PURE__*/_react.default.createElement("span", null, song.upVotes), /*#__PURE__*/_react.default.createElement("img", {
+      className: "up_votes_icon",
+      src: _arrow_upward24px.default,
+      alt: "Upvotes"
+    })), /*#__PURE__*/_react.default.createElement("div", {
+      className: "down_votes"
+    }, /*#__PURE__*/_react.default.createElement("span", null, song.downVotes), /*#__PURE__*/_react.default.createElement("img", {
+      className: "down_votes_icon",
+      src: _arrow_downward24px.default,
+      alt: "Downvotes"
+    }))), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("img", {
+      src: _shopping_cart24px.default,
+      alt: "shopping cart"
+    })), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("img", {
+      src: _lyrics.default,
+      alt: "song lyrics"
+    })));
+  }));
+}
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+var _default = Main;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","../SongsData.json":"SongsData.json","../svg/favorite_border-24px.svg":"svg/favorite_border-24px.svg","../svg/favorite-24px.svg":"svg/favorite-24px.svg","../svg/shopping_cart-24px (1).svg":"svg/shopping_cart-24px (1).svg","../svg/shopping_cart-24px.svg":"svg/shopping_cart-24px.svg","../svg/arrow_upward-24px.svg":"svg/arrow_upward-24px.svg","../svg/arrow_downward-24px.svg":"svg/arrow_downward-24px.svg","../svg/lyrics.svg":"svg/lyrics.svg"}],"App.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _Header = _interopRequireDefault(require("./components/Header"));
+
+var _Main = _interopRequireDefault(require("./components/Main"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function App() {
-  const [songs, setSongs] = (0, _react.useState)([]);
-
-  async function getAllSongs() {
-    const res = await fetch(_SongsData.default);
-    const data = await res.json();
-    console.log(data);
-    setSongs(data);
-  }
-
-  (0, _react.useEffect)(() => {
-    getAllSongs();
-  }, []);
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Header.default, null), songs.map(song => {
-    return /*#__PURE__*/_react.default.createElement("article", {
-      key: song.id
-    }, /*#__PURE__*/_react.default.createElement("header", null, /*#__PURE__*/_react.default.createElement("h2", null, song.title), /*#__PURE__*/_react.default.createElement("p", null, song.singer)), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("p", null, song.upVotes), /*#__PURE__*/_react.default.createElement("p", null, song.downVotes)), /*#__PURE__*/_react.default.createElement("p", null, song.lyrics));
-  }));
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Header.default, null), /*#__PURE__*/_react.default.createElement(_Main.default, null));
 }
 
 var _default = App;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","./components/Header":"components/Header.js","./SongsData":"SongsData.js"}],"index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./components/Header":"components/Header.js","./components/Main":"components/Main.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -29927,7 +29982,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65038" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51601" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -1,2 +1,36 @@
+body {
+    margin: 0;
+    padding: 0;
+
+}
+
+.heading {
+    margin: 0;
+}
+
+.song_cart {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: black;
+    color: white;
+    padding: 32px;
+    margin: 16px;
+}
+
+.voting {
+    display: flex;
+    flex-direction: row;
+    margin-block-start: 8px;
+}
+
+.up_votes_icon,
+.down_votes_icon {
+    margin-block-end: -8px;
+}
+
+.down_votes {
+    margin-inline-start: 32px;
+}
 
 /*# sourceMappingURL=/styles.8986bff4.css.map */
