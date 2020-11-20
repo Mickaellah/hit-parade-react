@@ -13,7 +13,7 @@ import lyrics from '../svg/lyrics.svg';
 
 export default function PopularSong() {
     const context = useContext(Context);
-    const {upVotesIncreament, downVotesIncreament} = useContext(Context);
+    const {upVotesIncreament, downVotesIncreament, toggleFavorite} = useContext(Context);
     const lsSongs = context.sortedSong;
     return (
         <main>
@@ -23,8 +23,8 @@ export default function PopularSong() {
                         <div>
                             {
                                 song.isFavorited === true 
-                                ? <img src={favorite} alt="favorited"/>
-                                : <img src={favoriteOutline} alt="not favorited" />
+                                ? <img onClick={() => toggleFavorite(song.id)} src={favorite} alt="favorited"/>
+                                : <img onClick={() => toggleFavorite(song.id)} src={favoriteOutline} alt="not favorited" />
                             }
                         </div>
                         <header className="header">

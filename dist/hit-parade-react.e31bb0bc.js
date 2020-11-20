@@ -33978,6 +33978,19 @@ function ContextProvider(props) {
     setCount(downVotes);
   }
 
+  function toggleFavorite(id) {
+    const newSongArray = songs.map(song => {
+      if (song.id === id) {
+        return { ...song,
+          isFavorited: !song.isFavorited
+        };
+      }
+
+      return song;
+    });
+    setSongs(newSongArray);
+  }
+
   const sortedSong = songs.sort((songX, songY) => {
     const ratioX = songX.upVotes - songX.downVotes;
     const ratioY = songY.upVotes - songY.downVotes;
@@ -33989,7 +34002,8 @@ function ContextProvider(props) {
       sortedSong,
       cartItems,
       upVotesIncreament,
-      downVotesIncreament
+      downVotesIncreament,
+      toggleFavorite
     }
   }, props.children);
 }
@@ -34043,7 +34057,8 @@ function PopularSong() {
   const context = (0, _react.useContext)(_Context.Context);
   const {
     upVotesIncreament,
-    downVotesIncreament
+    downVotesIncreament,
+    toggleFavorite
   } = (0, _react.useContext)(_Context.Context);
   const lsSongs = context.sortedSong;
   return /*#__PURE__*/_react.default.createElement("main", null, lsSongs.map(song => {
@@ -34051,9 +34066,11 @@ function PopularSong() {
       key: song.id,
       className: "song_cart"
     }, /*#__PURE__*/_react.default.createElement("div", null, song.isFavorited === true ? /*#__PURE__*/_react.default.createElement("img", {
+      onClick: () => toggleFavorite(song.id),
       src: _favorite24px.default,
       alt: "favorited"
     }) : /*#__PURE__*/_react.default.createElement("img", {
+      onClick: () => toggleFavorite(song.id),
       src: _favorite_border24px.default,
       alt: "not favorited"
     })), /*#__PURE__*/_react.default.createElement("header", {
@@ -34325,7 +34342,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62512" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51999" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

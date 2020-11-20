@@ -26,6 +26,19 @@ function ContextProvider(props) {
         setCount(downVotes);
     }
 
+    function toggleFavorite(id) {
+        const newSongArray = songs.map(song => {
+            if (song.id === id) {
+                return {
+                    ...song,
+                    isFavorited: !song.isFavorited,
+                };
+            }
+            return song;
+        });
+        setSongs(newSongArray);
+    }
+
     const sortedSong = songs.sort((songX, songY) => {
         const ratioX = songX.upVotes - songX.downVotes;
         const ratioY = songY.upVotes - songY.downVotes;
@@ -33,7 +46,7 @@ function ContextProvider(props) {
     });
 
     return (
-        <Context.Provider value={{songs, sortedSong, cartItems, upVotesIncreament, downVotesIncreament}}>
+        <Context.Provider value={{songs, sortedSong, cartItems, upVotesIncreament, downVotesIncreament, toggleFavorite}}>
             {props.children}
         </Context.Provider>
     )
