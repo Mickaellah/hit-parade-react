@@ -13,7 +13,7 @@ import lyrics from '../svg/lyrics.svg';
 
 export default function PopularSong() {
     const context = useContext(Context);
-    const {upVotesIncreament, downVotesIncreament, toggleFavorite} = useContext(Context);
+    const {upVotesIncreament, downVotesIncreament, toggleFavorite, getSongLyrics, addToCart} = useContext(Context);
     const lsSongs = context.sortedSong;
     return (
         <main>
@@ -65,12 +65,12 @@ export default function PopularSong() {
                         </div>
                         <div>
                             <Link to="/cart">
-                                <img src={shoppingCartOutline} alt="shopping cart" />
+                                <img onClick={() => addToCart(song.id)} src={shoppingCartOutline} alt="shopping cart" />
                             </Link>
                         </div>
                         <div>
                             <Link to="/lyrics">
-                                <img src={lyrics} alt="song lyrics" />
+                                <img onClick={() => getSongLyrics(song.id)} src={lyrics} alt="song lyrics" />
                             </Link>
                         </div>
                     </article>

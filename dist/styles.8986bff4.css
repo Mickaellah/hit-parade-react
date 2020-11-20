@@ -128,4 +128,36 @@ textarea {
     margin-inline-start: 16px;
 }
 
+.cart_item {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 32px;
+    margin-block-start: 16px;
+}
+
+.cart_title > h3 {
+    margin-block-start: 0;
+}
+
+.buy {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-block-start: 32px;
+    margin-block-end: 32px;
+}
+
+.buy_bttn {
+    padding-inline: 32px;
+    padding-block: 8px;
+    border-radius: 8px;
+    border: none;
+    background-color: orange;
+    box-shadow: 2px 3px 3px gray;
+}
+
+
 /*# sourceMappingURL=/styles.8986bff4.css.map */

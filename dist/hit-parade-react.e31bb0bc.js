@@ -33960,6 +33960,7 @@ function ContextProvider(props) {
   const [songs, setSongs] = (0, _react.useState)([]);
   const [cartItems, setCartItems] = (0, _react.useState)([]);
   const [count, setCount] = (0, _react.useState)(0);
+  const [lyrics, setLyrics] = (0, _react.useState)({});
   (0, _react.useEffect)(() => {
     setSongs(_SongsData.default);
   }, []);
@@ -33991,6 +33992,16 @@ function ContextProvider(props) {
     setSongs(newSongArray);
   }
 
+  function addToCart(song) {
+    setCartItems(prevItems => [...prevItems, song]);
+  }
+
+  function getSongLyrics(songLyrics) {
+    setLyrics({ ...lyrics,
+      songLyrics
+    });
+  }
+
   const sortedSong = songs.sort((songX, songY) => {
     const ratioX = songX.upVotes - songX.downVotes;
     const ratioY = songY.upVotes - songY.downVotes;
@@ -34001,9 +34012,11 @@ function ContextProvider(props) {
       songs,
       sortedSong,
       cartItems,
+      addToCart,
       upVotesIncreament,
       downVotesIncreament,
-      toggleFavorite
+      toggleFavorite,
+      getSongLyrics
     }
   }, props.children);
 }
@@ -34058,7 +34071,9 @@ function PopularSong() {
   const {
     upVotesIncreament,
     downVotesIncreament,
-    toggleFavorite
+    toggleFavorite,
+    getSongLyrics,
+    addToCart
   } = (0, _react.useContext)(_Context.Context);
   const lsSongs = context.sortedSong;
   return /*#__PURE__*/_react.default.createElement("main", null, lsSongs.map(song => {
@@ -34104,11 +34119,13 @@ function PopularSong() {
     })))), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
       to: "/cart"
     }, /*#__PURE__*/_react.default.createElement("img", {
+      onClick: () => addToCart(song.id),
       src: _shopping_cart24px.default,
       alt: "shopping cart"
     }))), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
       to: "/lyrics"
     }, /*#__PURE__*/_react.default.createElement("img", {
+      onClick: () => getSongLyrics(song.id),
       src: _lyrics.default,
       alt: "song lyrics"
     }))));
@@ -34124,33 +34141,51 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = Styles;
 
-var _react = _interopRequireWildcard(require("react"));
-
-var _Context = require("../Context");
+var _react = _interopRequireDefault(require("react"));
 
 var _headset24px = _interopRequireDefault(require("../svg/headset-24px.svg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
 function Styles() {
-  const context = (0, _react.useContext)(_Context.Context);
-  return /*#__PURE__*/_react.default.createElement("div", null, context.songs.map(song => {
-    return /*#__PURE__*/_react.default.createElement("header", {
-      className: "styles",
-      key: song.id
-    }, /*#__PURE__*/_react.default.createElement("img", {
-      src: _headset24px.default,
-      alt: "Head set"
-    }), /*#__PURE__*/_react.default.createElement("h2", {
-      className: "styles_heading"
-    }, song.style));
-  }));
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", {
+    className: "styles"
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    src: _headset24px.default,
+    alt: "Head set"
+  }), /*#__PURE__*/_react.default.createElement("h2", {
+    className: "styles_heading"
+  }, "Slow")), /*#__PURE__*/_react.default.createElement("div", {
+    className: "styles"
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    src: _headset24px.default,
+    alt: "Head set"
+  }), /*#__PURE__*/_react.default.createElement("h2", {
+    className: "styles_heading"
+  }, "Classic")), /*#__PURE__*/_react.default.createElement("div", {
+    className: "styles"
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    src: _headset24px.default,
+    alt: "Head set"
+  }), /*#__PURE__*/_react.default.createElement("h2", {
+    className: "styles_heading"
+  }, "Jazz")), /*#__PURE__*/_react.default.createElement("div", {
+    className: "styles"
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    src: _headset24px.default,
+    alt: "Head set"
+  }), /*#__PURE__*/_react.default.createElement("h2", {
+    className: "styles_heading"
+  }, "Rock")), /*#__PURE__*/_react.default.createElement("div", {
+    className: "styles"
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    src: _headset24px.default,
+    alt: "Head set"
+  }), /*#__PURE__*/_react.default.createElement("h2", {
+    className: "styles_heading"
+  }, "Rnb")));
 }
-},{"react":"node_modules/react/index.js","../Context":"Context.js","../svg/headset-24px.svg":"svg/headset-24px.svg"}],"pages/Add.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../svg/headset-24px.svg":"svg/headset-24px.svg"}],"pages/Add.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34203,9 +34238,35 @@ function Add() {
     type: "submit"
   }, "Add"))));
 }
-},{"react":"node_modules/react/index.js"}],"components/CartItem.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js"}],"svg/trash.svg":[function(require,module,exports) {
+module.exports = "/trash.0ef05b20.svg";
+},{}],"components/CartItem.js":[function(require,module,exports) {
+"use strict";
 
-},{}],"pages/Cart.js":[function(require,module,exports) {
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = CartItem;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _trash = _interopRequireDefault(require("../svg/trash.svg"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function CartItem({
+  item
+}) {
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("article", {
+    className: "cart_item"
+  }, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("img", {
+    src: _trash.default,
+    alt: "delete icon"
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    className: "cart_title"
+  }, /*#__PURE__*/_react.default.createElement("h3", null, item.title), /*#__PURE__*/_react.default.createElement("p", null, item.singer)), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("p", null, item.price))));
+}
+},{"react":"node_modules/react/index.js","../svg/trash.svg":"svg/trash.svg"}],"pages/Cart.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34233,7 +34294,10 @@ function Cart() {
     key: item.id,
     item: item
   }));
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h2", null, "Cart"), cartItemElement, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("button", {
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h2", null, "Cart"), cartItemElement, /*#__PURE__*/_react.default.createElement("div", {
+    className: "buy"
+  }, /*#__PURE__*/_react.default.createElement("button", {
+    className: "buy_bttn",
     type: "button"
   }, "Buy"), /*#__PURE__*/_react.default.createElement("p", null, "Total: ")));
 }
@@ -34342,7 +34406,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51999" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52329" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
