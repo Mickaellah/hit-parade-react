@@ -51,3 +51,14 @@ h1 {
 .down_votes {
     margin-inline-start: 32px;
 }
+
+.styles {
+    display: flex;
+    flex-direction: row;
+}
+
+.styles_heading {
+    text-transform: capitalize;
+    font-size: 36px;
+    margin-inline-start: 16px;
+}

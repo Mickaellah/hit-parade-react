@@ -33922,67 +33922,7 @@ function Header() {
     to: "/cart"
   }, "Cart")));
 }
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"pages/PopularSong.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = PopularSong;
-
-var _react = _interopRequireDefault(require("react"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function PopularSong() {
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h2", null, "Popular song"));
-}
-},{"react":"node_modules/react/index.js"}],"pages/Styles.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = Styles;
-
-var _react = _interopRequireDefault(require("react"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function Styles() {
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h2", null, "Styles"));
-}
-},{"react":"node_modules/react/index.js"}],"pages/Add.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = Add;
-
-var _react = _interopRequireDefault(require("react"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function Add() {
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h2", null, "Add"));
-}
-},{"react":"node_modules/react/index.js"}],"pages/Cart.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = Cart;
-
-var _react = _interopRequireDefault(require("react"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function Cart() {
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h2", null, "Cart"));
-}
-},{"react":"node_modules/react/index.js"}],"svg/favorite_border-24px.svg":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"svg/favorite_border-24px.svg":[function(require,module,exports) {
 module.exports = "/favorite_border-24px.d5915d2c.svg";
 },{}],"svg/favorite-24px.svg":[function(require,module,exports) {
 module.exports = "/favorite-24px.fee10fb4.svg";
@@ -33996,29 +33936,17 @@ module.exports = "/arrow_upward-24px.abfba325.svg";
 module.exports = "/arrow_downward-24px.ee6a6e28.svg";
 },{}],"svg/lyrics.svg":[function(require,module,exports) {
 module.exports = "/lyrics.1497dd2a.svg";
-},{}],"components/Main.js":[function(require,module,exports) {
+},{}],"pages/PopularSong.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports.default = PopularSong;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _reactRouterDom = require("react-router-dom");
-
 var _SongsData = _interopRequireDefault(require("../SongsData.json"));
-
-var _Header = _interopRequireDefault(require("../components/Header"));
-
-var _PopularSong = _interopRequireDefault(require("../pages/PopularSong"));
-
-var _Styles = _interopRequireDefault(require("../pages/Styles"));
-
-var _Add = _interopRequireDefault(require("../pages/Add"));
-
-var _Cart = _interopRequireDefault(require("../pages/Cart"));
 
 var _favorite_border24px = _interopRequireDefault(require("../svg/favorite_border-24px.svg"));
 
@@ -34036,19 +33964,8 @@ var _lyrics = _interopRequireDefault(require("../svg/lyrics.svg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function Main() {
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.BrowserRouter, null, /*#__PURE__*/_react.default.createElement(_Header.default, null), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Switch, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
-    exact: true,
-    path: "/"
-  }, /*#__PURE__*/_react.default.createElement(_PopularSong.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
-    exact: true,
-    path: "/styles"
-  }, /*#__PURE__*/_react.default.createElement(_Styles.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
-    exact: true,
-    path: "/add"
-  }, /*#__PURE__*/_react.default.createElement(_Add.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
-    path: "/cart"
-  }, /*#__PURE__*/_react.default.createElement(_Cart.default, null)))), /*#__PURE__*/_react.default.createElement("main", null, _SongsData.default.map(song => {
+function PopularSong() {
+  return /*#__PURE__*/_react.default.createElement("main", null, _SongsData.default.map(song => {
     return /*#__PURE__*/_react.default.createElement("article", {
       key: song.id,
       className: "song_cart"
@@ -34083,12 +34000,112 @@ function Main() {
       src: _lyrics.default,
       alt: "song lyrics"
     })));
-  })));
+  }));
+}
+},{"react":"node_modules/react/index.js","../SongsData.json":"SongsData.json","../svg/favorite_border-24px.svg":"svg/favorite_border-24px.svg","../svg/favorite-24px.svg":"svg/favorite-24px.svg","../svg/shopping_cart-24px (1).svg":"svg/shopping_cart-24px (1).svg","../svg/shopping_cart-24px.svg":"svg/shopping_cart-24px.svg","../svg/arrow_upward-24px.svg":"svg/arrow_upward-24px.svg","../svg/arrow_downward-24px.svg":"svg/arrow_downward-24px.svg","../svg/lyrics.svg":"svg/lyrics.svg"}],"svg/headset-24px.svg":[function(require,module,exports) {
+module.exports = "/headset-24px.898884ab.svg";
+},{}],"pages/Styles.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Styles;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _SongsData = _interopRequireDefault(require("../SongsData.json"));
+
+var _headset24px = _interopRequireDefault(require("../svg/headset-24px.svg"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Styles() {
+  return /*#__PURE__*/_react.default.createElement("div", null, _SongsData.default.map(song => {
+    return /*#__PURE__*/_react.default.createElement("header", {
+      className: "styles"
+    }, /*#__PURE__*/_react.default.createElement("img", {
+      src: _headset24px.default,
+      alt: "Head set"
+    }), /*#__PURE__*/_react.default.createElement("h2", {
+      className: "styles_heading"
+    }, song.style));
+  }));
+}
+},{"react":"node_modules/react/index.js","../SongsData.json":"SongsData.json","../svg/headset-24px.svg":"svg/headset-24px.svg"}],"pages/Add.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Add;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Add() {
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h2", null, "Add"));
+}
+},{"react":"node_modules/react/index.js"}],"pages/Cart.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Cart;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Cart() {
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h2", null, "Cart"));
+}
+},{"react":"node_modules/react/index.js"}],"components/Main.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+var _SongsData = _interopRequireDefault(require("../SongsData.json"));
+
+var _Header = _interopRequireDefault(require("../components/Header"));
+
+var _PopularSong = _interopRequireDefault(require("../pages/PopularSong"));
+
+var _Styles = _interopRequireDefault(require("../pages/Styles"));
+
+var _Add = _interopRequireDefault(require("../pages/Add"));
+
+var _Cart = _interopRequireDefault(require("../pages/Cart"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Main() {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.BrowserRouter, null, /*#__PURE__*/_react.default.createElement(_Header.default, null), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Switch, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+    exact: true,
+    path: "/"
+  }, /*#__PURE__*/_react.default.createElement(_PopularSong.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+    exact: true,
+    path: "/styles"
+  }, /*#__PURE__*/_react.default.createElement(_Styles.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+    exact: true,
+    path: "/add"
+  }, /*#__PURE__*/_react.default.createElement(_Add.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+    path: "/cart"
+  }, /*#__PURE__*/_react.default.createElement(_Cart.default, null)))));
 }
 
 var _default = Main;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../SongsData.json":"SongsData.json","../components/Header":"components/Header.js","../pages/PopularSong":"pages/PopularSong.js","../pages/Styles":"pages/Styles.js","../pages/Add":"pages/Add.js","../pages/Cart":"pages/Cart.js","../svg/favorite_border-24px.svg":"svg/favorite_border-24px.svg","../svg/favorite-24px.svg":"svg/favorite-24px.svg","../svg/shopping_cart-24px (1).svg":"svg/shopping_cart-24px (1).svg","../svg/shopping_cart-24px.svg":"svg/shopping_cart-24px.svg","../svg/arrow_upward-24px.svg":"svg/arrow_upward-24px.svg","../svg/arrow_downward-24px.svg":"svg/arrow_downward-24px.svg","../svg/lyrics.svg":"svg/lyrics.svg"}],"App.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../SongsData.json":"SongsData.json","../components/Header":"components/Header.js","../pages/PopularSong":"pages/PopularSong.js","../pages/Styles":"pages/Styles.js","../pages/Add":"pages/Add.js","../pages/Cart":"pages/Cart.js"}],"App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34148,7 +34165,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55729" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56639" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

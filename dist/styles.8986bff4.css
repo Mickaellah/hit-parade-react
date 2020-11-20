@@ -52,4 +52,15 @@ h1 {
     margin-inline-start: 32px;
 }
 
+.styles {
+    display: flex;
+    flex-direction: row;
+}
+
+.styles_heading {
+    text-transform: capitalize;
+    font-size: 36px;
+    margin-inline-start: 16px;
+}
+
 /*# sourceMappingURL=/styles.8986bff4.css.map */
