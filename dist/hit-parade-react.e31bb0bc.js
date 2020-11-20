@@ -29772,34 +29772,7 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"components/Header.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = Header;
-
-var _react = _interopRequireDefault(require("react"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function Header() {
-  return /*#__PURE__*/_react.default.createElement("header", null, /*#__PURE__*/_react.default.createElement("h1", null, "Hit Parade"), /*#__PURE__*/_react.default.createElement("nav", {
-    className: "navigation"
-  }, /*#__PURE__*/_react.default.createElement("ul", {
-    className: "navigation_container"
-  }, /*#__PURE__*/_react.default.createElement("li", {
-    className: "list_item"
-  }, "Popular songs"), /*#__PURE__*/_react.default.createElement("li", {
-    className: "list_item"
-  }, "Styles"), /*#__PURE__*/_react.default.createElement("li", {
-    className: "list_item"
-  }, "Add"), /*#__PURE__*/_react.default.createElement("li", {
-    className: "list_item"
-  }, "Cart"))));
-}
-},{"react":"node_modules/react/index.js"}],"SongsData.json":[function(require,module,exports) {
+},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"SongsData.json":[function(require,module,exports) {
 module.exports = [{
   "title": "Avelao",
   "singer": "Chantal",
@@ -29837,7 +29810,34 @@ module.exports = [{
   "lyrics": "",
   "id": "1605846002717"
 }];
-},{}],"svg/favorite_border-24px.svg":[function(require,module,exports) {
+},{}],"components/Header.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Header;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Header() {
+  return /*#__PURE__*/_react.default.createElement("header", null, /*#__PURE__*/_react.default.createElement("h1", null, "Hit Parade"), /*#__PURE__*/_react.default.createElement("nav", {
+    className: "navigation"
+  }, /*#__PURE__*/_react.default.createElement("ul", {
+    className: "navigation_container"
+  }, /*#__PURE__*/_react.default.createElement("li", {
+    className: "list_item"
+  }, "Popular songs"), /*#__PURE__*/_react.default.createElement("li", {
+    className: "list_item"
+  }, "Styles"), /*#__PURE__*/_react.default.createElement("li", {
+    className: "list_item"
+  }, "Add"), /*#__PURE__*/_react.default.createElement("li", {
+    className: "list_item"
+  }, "Cart"))));
+}
+},{"react":"node_modules/react/index.js"}],"svg/favorite_border-24px.svg":[function(require,module,exports) {
 module.exports = "/favorite_border-24px.d5915d2c.svg";
 },{}],"svg/favorite-24px.svg":[function(require,module,exports) {
 module.exports = "/favorite-24px.fee10fb4.svg";
@@ -29863,6 +29863,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _SongsData = _interopRequireDefault(require("../SongsData.json"));
 
+var _Header = _interopRequireDefault(require("../components/Header"));
+
 var _favorite_border24px = _interopRequireDefault(require("../svg/favorite_border-24px.svg"));
 
 var _favorite24px = _interopRequireDefault(require("../svg/favorite-24px.svg"));
@@ -29880,7 +29882,7 @@ var _lyrics = _interopRequireDefault(require("../svg/lyrics.svg"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Main() {
-  return /*#__PURE__*/_react.default.createElement("main", null, _SongsData.default.map(song => {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Header.default, null), /*#__PURE__*/_react.default.createElement("main", null, _SongsData.default.map(song => {
     return /*#__PURE__*/_react.default.createElement("article", {
       key: song.id,
       className: "song_cart"
@@ -29915,12 +29917,12 @@ function Main() {
       src: _lyrics.default,
       alt: "song lyrics"
     })));
-  }));
+  })));
 }
 
 var _default = Main;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","../SongsData.json":"SongsData.json","../svg/favorite_border-24px.svg":"svg/favorite_border-24px.svg","../svg/favorite-24px.svg":"svg/favorite-24px.svg","../svg/shopping_cart-24px (1).svg":"svg/shopping_cart-24px (1).svg","../svg/shopping_cart-24px.svg":"svg/shopping_cart-24px.svg","../svg/arrow_upward-24px.svg":"svg/arrow_upward-24px.svg","../svg/arrow_downward-24px.svg":"svg/arrow_downward-24px.svg","../svg/lyrics.svg":"svg/lyrics.svg"}],"App.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../SongsData.json":"SongsData.json","../components/Header":"components/Header.js","../svg/favorite_border-24px.svg":"svg/favorite_border-24px.svg","../svg/favorite-24px.svg":"svg/favorite-24px.svg","../svg/shopping_cart-24px (1).svg":"svg/shopping_cart-24px (1).svg","../svg/shopping_cart-24px.svg":"svg/shopping_cart-24px.svg","../svg/arrow_upward-24px.svg":"svg/arrow_upward-24px.svg","../svg/arrow_downward-24px.svg":"svg/arrow_downward-24px.svg","../svg/lyrics.svg":"svg/lyrics.svg"}],"App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -29930,19 +29932,17 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _Header = _interopRequireDefault(require("./components/Header"));
-
 var _Main = _interopRequireDefault(require("./components/Main"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function App() {
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Header.default, null), /*#__PURE__*/_react.default.createElement(_Main.default, null));
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Main.default, null));
 }
 
 var _default = App;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","./components/Header":"components/Header.js","./components/Main":"components/Main.js"}],"index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./components/Main":"components/Main.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -29982,7 +29982,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51601" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54821" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
