@@ -34023,7 +34023,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function Styles() {
   return /*#__PURE__*/_react.default.createElement("div", null, _SongsData.default.map(song => {
     return /*#__PURE__*/_react.default.createElement("header", {
-      className: "styles"
+      className: "styles",
+      key: song.id
     }, /*#__PURE__*/_react.default.createElement("img", {
       src: _headset24px.default,
       alt: "Head set"
@@ -34045,7 +34046,45 @@ var _react = _interopRequireDefault(require("react"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Add() {
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h2", null, "Add"));
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h2", null, "Add a new song"), /*#__PURE__*/_react.default.createElement("form", {
+    className: "add_form"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "input_container"
+  }, /*#__PURE__*/_react.default.createElement("input", {
+    id: "title",
+    placeholder: "Title",
+    required: true
+  }), /*#__PURE__*/_react.default.createElement("input", {
+    id: "artist",
+    placeholder: "Artist",
+    required: true
+  }), /*#__PURE__*/_react.default.createElement("input", {
+    id: "price",
+    placeholder: "Price",
+    required: true
+  }), /*#__PURE__*/_react.default.createElement("select", {
+    id: "style"
+  }, /*#__PURE__*/_react.default.createElement("option", {
+    value: "style"
+  }, "Style"), /*#__PURE__*/_react.default.createElement("option", {
+    value: "rnb"
+  }, "Rnb"), /*#__PURE__*/_react.default.createElement("option", {
+    value: "slow"
+  }, "Slow"), /*#__PURE__*/_react.default.createElement("option", {
+    value: "rock"
+  }, "Rock"), /*#__PURE__*/_react.default.createElement("option", {
+    value: "classic"
+  }, "Classic"), /*#__PURE__*/_react.default.createElement("option", {
+    value: "jazz"
+  }, "Jazz")), /*#__PURE__*/_react.default.createElement("textarea", {
+    id: "lyrics",
+    rows: "12",
+    placeholder: "Lyrics",
+    required: true
+  })), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("button", {
+    className: "add_button",
+    type: "submit"
+  }, "Add"))));
 }
 },{"react":"node_modules/react/index.js"}],"pages/Cart.js":[function(require,module,exports) {
 "use strict";
@@ -34165,7 +34204,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56639" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58119" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

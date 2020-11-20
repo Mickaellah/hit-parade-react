@@ -63,4 +63,52 @@ h1 {
     margin-inline-start: 16px;
 }
 
+.add_form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input_container {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    padding-block: 12px;
+    padding-inline: 48px;
+    margin-block: 16px;
+    border-radius: 8px;
+    border: 1px solid gray;
+    background-color: #bae8e8;
+}
+
+select {
+    padding-block: 12px;
+    padding-inline: 48px;
+    border-radius: 8px;
+    margin-block: 16px;
+    background-color: #bae8e8;
+}
+
+textarea {
+    margin-block: 16px;
+    padding-inline: 48px;
+    border-radius: 8px;
+    background-color: #bae8e8;
+}
+
+::placeholder {
+    color: black;
+    font-size: 16px;
+}
+
+.add_button {
+    padding-block: 12px;
+    padding-inline: 32px;
+    border: none;
+    border-radius: 8px;
+    background-color: orange;
+    box-shadow: 2px 3px 3px gray;
+}
+
 /*# sourceMappingURL=/styles.8986bff4.css.map */

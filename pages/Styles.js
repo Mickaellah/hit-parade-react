@@ -7,7 +7,7 @@ export default function Styles() {
         <div>
             {songs.map((song) => {
                 return (
-                    <header className="styles">
+                    <header className="styles" key={song.id}>
                         <img src={Headset} alt="Head set" />
                         <h2 className="styles_heading">{song.style}</h2>
                     </header>
