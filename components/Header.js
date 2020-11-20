@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import {Link} from 'react-router-dom';
 
 export default function Header() {
     return (
@@ -6,14 +7,20 @@ export default function Header() {
             <h1>
                 Hit Parade
             </h1>
-            <nav className="navigation">
-                <ul className="navigation_container">
-                    <li className="list_item">Popular songs</li>
-                    <li className="list_item">Styles</li>
-                    <li className="list_item">Add</li>
-                    <li className="list_item">Cart</li>
-                </ul>
-            </nav>
+            <div className="pages">
+                <Link className="link" to="/">
+                    Popular songs
+                </Link>
+                <Link className="link" to="/styles">
+                    Styles
+                </Link>
+                <Link className="link" to="/add">
+                    Add
+                </Link>
+                <Link className="link" to="/cart">
+                    Cart
+                </Link>
+            </div>
         </header>
     )
 }

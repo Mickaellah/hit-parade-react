@@ -1,7 +1,18 @@
 import React from 'react';
 
+import {
+	BrowserRouter as Router,
+    Switch,
+	Route,
+} from 'react-router-dom';
+
 import songs from '../SongsData.json';
 import Header from '../components/Header';
+
+import PopularSong from '../pages/PopularSong';
+import Styles from '../pages/Styles';
+import Add from '../pages/Add';
+import Cart from '../pages/Cart';
 
 import favoriteOutline from '../svg/favorite_border-24px.svg';
 import favorite from '../svg/favorite-24px.svg';
@@ -14,7 +25,23 @@ import lyrics from '../svg/lyrics.svg'
 function Main() {
     return (
         <>
-            <Header />
+            <Router>
+                <Header />
+                <Switch>
+                    <Route exact path="/">
+                        <PopularSong />
+                    </Route>
+                    <Route exact path="/styles">
+                        <Styles />
+                    </Route>
+                    <Route exact path="/add">
+                        <Add />
+                    </Route>
+                    <Route path="/cart">
+                        <Cart />
+                    </Route>
+                </Switch>
+            </Router>
             <main>
                 {songs.map((song) => {
                     return (

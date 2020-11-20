@@ -1,7 +1,26 @@
 body {
     margin: 0;
     padding: 0;
+    max-width: 600px;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+}
 
+h1 {
+    font-size: 36px;
+}
+
+.pages {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.link {
+    text-decoration: none;
+    color: darkgray;
+    font-weight: 700;
+    font-size: 24px;
 }
 
 .heading {
@@ -15,7 +34,7 @@ body {
     background-color: black;
     color: white;
     padding: 32px;
-    margin: 16px;
+    margin-block: 16px;
 }
 
 .voting {
