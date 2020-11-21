@@ -166,5 +166,19 @@ textarea {
     padding: 0;
 }
 
+.style_heading {
+    display: flex;
+}
+
+.style_header {
+    margin-inline-start: 16px;
+}
+
+.songs {
+    padding: 32px;
+    /* padding-inline: 48px; */
+    color: white;
+    background-color: black;
+}
 
 /*# sourceMappingURL=/styles.8986bff4.css.map */

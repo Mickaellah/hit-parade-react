@@ -1,29 +1,24 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import {Context} from '../Context';
+
+import {Link} from 'react-router-dom';
 
 import Headset from '../svg/headset-24px.svg';
+
 export default function Styles() {
+    const {songs} = useContext(Context);
     return (
         <div>
-            <div className="styles">
-                <img src={Headset} alt="Head set" />
-                <h2 className="styles_heading">Slow</h2>
-            </div>
-            <div className="styles">
-                <img src={Headset} alt="Head set" />
-                <h2 className="styles_heading">Classic</h2>
-            </div>
-            <div className="styles">
-                <img src={Headset} alt="Head set" />
-                <h2 className="styles_heading">Jazz</h2>
-            </div>
-            <div className="styles">
-                <img src={Headset} alt="Head set" />
-                <h2 className="styles_heading">Rock</h2>
-            </div>
-            <div className="styles">
-                <img src={Headset} alt="Head set" />
-                <h2 className="styles_heading">Rnb</h2>
-            </div>
+            {songs.map(song => {
+                return (
+                    <Link key={song.id} to={`/styles/${song.style}`}>
+                        <div className="styles">
+                            <img src={Headset} alt="Head set" />
+                            <h2 className="styles_heading">{song.style}</h2>
+                        </div>
+                    </Link>
+                )
+            })}
         </div>
     )
 }
