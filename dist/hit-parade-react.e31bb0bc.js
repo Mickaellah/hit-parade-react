@@ -34070,7 +34070,6 @@ function PopularSong() {
     upVotesIncreament,
     downVotesIncreament,
     toggleFavorite,
-    getSongLyrics,
     addToCart
   } = (0, _react.useContext)(_Context.Context);
   const lsSongs = context.sortedSong;
@@ -34293,12 +34292,13 @@ function Cart() {
     key: item.id,
     item: item
   }));
+  const totalPrice = cartItems.reduce((priceTotal, price) => priceTotal + parseInt(price.price), 0);
   return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h2", null, "Cart"), cartItemElement, /*#__PURE__*/_react.default.createElement("div", {
     className: "buy"
   }, /*#__PURE__*/_react.default.createElement("button", {
     className: "buy_bttn",
     type: "button"
-  }, "Buy"), /*#__PURE__*/_react.default.createElement("p", null, "Total: ")));
+  }, "Buy"), /*#__PURE__*/_react.default.createElement("p", null, "Total: ", totalPrice, " Ar")));
 }
 },{"react":"node_modules/react/index.js","../Context":"Context.js","../components/CartItem":"components/CartItem.js"}],"pages/Lyrics.js":[function(require,module,exports) {
 "use strict";
@@ -34361,7 +34361,6 @@ function SongName() {
     songs
   } = (0, _react.useContext)(_Context.Context);
   const songName = songs.filter(song => song.style.toLowerCase() === styleName.toLowerCase());
-  console.log(styleName);
   return /*#__PURE__*/_react.default.createElement("div", null, songName.map(songStyle => {
     return /*#__PURE__*/_react.default.createElement("div", {
       key: songStyle.id
@@ -34490,7 +34489,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59465" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60074" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

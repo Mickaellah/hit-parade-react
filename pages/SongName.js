@@ -9,8 +9,6 @@ export default function SongName() {
     const {songs} = useContext(Context);
     const songName = songs.filter((song) => song.style.toLowerCase() === styleName.toLowerCase());
 
-    console.log(styleName);
-
     return (
         <div>
             {songName.map(songStyle => {

@@ -13,8 +13,9 @@ import lyrics from '../svg/lyrics.svg';
 
 export default function PopularSong() {
     const context = useContext(Context);
-    const {upVotesIncreament, downVotesIncreament, toggleFavorite, getSongLyrics, addToCart} = useContext(Context);
+    const {upVotesIncreament, downVotesIncreament, toggleFavorite, addToCart} = useContext(Context);
     const lsSongs = context.sortedSong;
+
     return (
         <main>
             {lsSongs.map((song) => {
