@@ -65,7 +65,7 @@ export default function PopularSong() {
                         </div>
                         <div>
                             <Link to="/cart">
-                                <img onClick={() => addToCart(song.id)} src={shoppingCartOutline} alt="shopping cart" />
+                                <img onClick={() => addToCart(song)} src={shoppingCartOutline} alt="shopping cart" />
                             </Link>
                         </div>
                         <div>

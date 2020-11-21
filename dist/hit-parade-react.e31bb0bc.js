@@ -33994,6 +33994,7 @@ function ContextProvider(props) {
 
   function addToCart(song) {
     setCartItems(prevItems => [...prevItems, song]);
+    console.log(cartItems);
   }
 
   function getSongLyrics(songLyrics) {
@@ -34119,7 +34120,7 @@ function PopularSong() {
     })))), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
       to: "/cart"
     }, /*#__PURE__*/_react.default.createElement("img", {
-      onClick: () => addToCart(song.id),
+      onClick: () => addToCart(song),
       src: _shopping_cart24px.default,
       alt: "shopping cart"
     }))), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
@@ -34406,7 +34407,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52329" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57625" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

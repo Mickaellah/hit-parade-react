@@ -42,6 +42,7 @@ function ContextProvider(props) {
 
     function addToCart(song) {
         setCartItems(prevItems => [...prevItems, song]);
+        console.log(cartItems);
     }
 
     function getSongLyrics(songLyrics) {
