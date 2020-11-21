@@ -1,15 +1,17 @@
-import React from 'react'
+import React, {useContext} from 'react';
+import {Context} from '../Context';
 
 export default function Add() {
+    const {newSongs, addNewSongs} = useContext(Context);
     return (
         <div>
             <h2>Add a new song</h2>
-            <form className="add_form">
+            <form onSubmit={addNewSongs} className="add_form">
                 <div className="input_container">
-                    <input id="title" placeholder="Title" required/>
-                    <input id="artist" placeholder="Artist" required />
-                    <input id="price" placeholder="Price" required />
-                    <select id="style">
+                    <input id="title" name="title" placeholder="Title"/>
+                    <input id="artist" name="artist" placeholder="Artist" />
+                    <input id="price" name="price" placeholder="Price" />
+                    <select name="style" id="style">
                         <option value="style">Style</option>
                         <option value="rnb">Rnb</option>
                         <option value="slow">Slow</option>
@@ -17,7 +19,7 @@ export default function Add() {
                         <option value="classic">Classic</option>
                         <option value="jazz">Jazz</option>
                     </select>
-                    <textarea id="lyrics" rows="12" placeholder="Lyrics" required />
+                    <textarea id="lyrics" name="lyrics" rows="12" placeholder="Lyrics" />
                 </div>
                 <div>
                     <button className="add_button" type="submit">Add</button>

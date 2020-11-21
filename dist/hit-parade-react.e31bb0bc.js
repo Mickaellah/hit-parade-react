@@ -33960,6 +33960,7 @@ function ContextProvider(props) {
   const [songs, setSongs] = (0, _react.useState)([]);
   const [cartItems, setCartItems] = (0, _react.useState)([]);
   const [count, setCount] = (0, _react.useState)(0);
+  const [newSongs, setNewSongs] = (0, _react.useState)('');
   (0, _react.useEffect)(() => {
     setSongs(_SongsData.default);
   }, []);
@@ -34000,6 +34001,34 @@ function ContextProvider(props) {
     console.log('I am deleted');
   }
 
+  const addNewSongs = e => {
+    e.preventDefault();
+    const {
+      title,
+      artist,
+      style,
+      lyrics,
+      price
+    } = e.target;
+    const newSong = {
+      title: title.value,
+      singer: artist.value,
+      style: style.value,
+      isFavorited: false,
+      upVotes: 0,
+      downVotes: 0,
+      price: price.value,
+      lyrics: lyrics.value,
+      id: Date.now()
+    };
+    setSongs([...songs, newSong]);
+  };
+
+  function handleChange(e) {
+    setNewSongs(e.target.value);
+    console.log(e.target.value);
+  }
+
   const sortedSong = songs.sort((songX, songY) => {
     const ratioX = songX.upVotes - songX.downVotes;
     const ratioY = songY.upVotes - songY.downVotes;
@@ -34014,7 +34043,10 @@ function ContextProvider(props) {
       upVotesIncreament,
       downVotesIncreament,
       toggleFavorite,
-      removeFromCart
+      removeFromCart,
+      addNewSongs,
+      handleChange,
+      newSongs
     }
   }, props.children);
 }
@@ -34177,28 +34209,38 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = Add;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = _interopRequireWildcard(require("react"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var _Context = require("../Context");
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function Add() {
+  const {
+    newSongs,
+    addNewSongs
+  } = (0, _react.useContext)(_Context.Context);
   return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h2", null, "Add a new song"), /*#__PURE__*/_react.default.createElement("form", {
+    onSubmit: addNewSongs,
     className: "add_form"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "input_container"
   }, /*#__PURE__*/_react.default.createElement("input", {
     id: "title",
-    placeholder: "Title",
-    required: true
+    name: "title",
+    placeholder: "Title"
   }), /*#__PURE__*/_react.default.createElement("input", {
     id: "artist",
-    placeholder: "Artist",
-    required: true
+    name: "artist",
+    placeholder: "Artist"
   }), /*#__PURE__*/_react.default.createElement("input", {
     id: "price",
-    placeholder: "Price",
-    required: true
+    name: "price",
+    placeholder: "Price"
   }), /*#__PURE__*/_react.default.createElement("select", {
+    name: "style",
     id: "style"
   }, /*#__PURE__*/_react.default.createElement("option", {
     value: "style"
@@ -34214,15 +34256,15 @@ function Add() {
     value: "jazz"
   }, "Jazz")), /*#__PURE__*/_react.default.createElement("textarea", {
     id: "lyrics",
+    name: "lyrics",
     rows: "12",
-    placeholder: "Lyrics",
-    required: true
+    placeholder: "Lyrics"
   })), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("button", {
     className: "add_button",
     type: "submit"
   }, "Add"))));
 }
-},{"react":"node_modules/react/index.js"}],"svg/trash.svg":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../Context":"Context.js"}],"svg/trash.svg":[function(require,module,exports) {
 module.exports = "/trash.0ef05b20.svg";
 },{}],"components/CartItem.js":[function(require,module,exports) {
 "use strict";
@@ -34293,9 +34335,15 @@ function Cart() {
     item: item
   }));
   const totalPrice = cartItems.reduce((priceTotal, price) => priceTotal + parseInt(price.price), 0);
+
+  function buySongs() {
+    alert(`Your songs cost you ${totalPrice} Ar`);
+  }
+
   return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h2", null, "Cart"), cartItemElement, /*#__PURE__*/_react.default.createElement("div", {
     className: "buy"
   }, /*#__PURE__*/_react.default.createElement("button", {
+    onClick: () => buySongs(),
     className: "buy_bttn",
     type: "button"
   }, "Buy"), /*#__PURE__*/_react.default.createElement("p", null, "Total: ", totalPrice, " Ar")));
@@ -34489,7 +34537,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60074" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61910" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
