@@ -10,7 +10,11 @@ export default function Lyrics() {
     console.log(songLyrics);
     return (
         <div>
-            {songLyrics.lyrics}
+            <h2>{songLyrics.singer}: {songLyrics.title}</h2>
+            <div className="lyrics_container">
+                <h3>Lyrics</h3>
+                <p>{songLyrics.lyrics}</p>
+            </div>
         </div>
     )
 }

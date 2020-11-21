@@ -34327,7 +34327,9 @@ function Lyrics() {
   } = (0, _react.useContext)(_Context.Context);
   const songLyrics = songs.find(song => song.id === songId);
   console.log(songLyrics);
-  return /*#__PURE__*/_react.default.createElement("div", null, songLyrics.lyrics);
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h2", null, songLyrics.singer, ": ", songLyrics.title), /*#__PURE__*/_react.default.createElement("div", {
+    className: "lyrics_container"
+  }, /*#__PURE__*/_react.default.createElement("h3", null, "Lyrics"), /*#__PURE__*/_react.default.createElement("p", null, songLyrics.lyrics)));
 }
 },{"react":"node_modules/react/index.js","../Context":"Context.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"pages/SongName.js":[function(require,module,exports) {
 "use strict";
@@ -34488,7 +34490,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58003" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59465" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

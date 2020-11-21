@@ -176,7 +176,12 @@ textarea {
 
 .songs {
     padding: 32px;
-    /* padding-inline: 48px; */
     color: white;
     background-color: black;
+}
+
+.lyrics_container {
+    padding: 32px;
+    background-color: black;
+    color: white;
 }
