@@ -159,5 +159,12 @@ textarea {
     box-shadow: 2px 3px 3px gray;
 }
 
+.delete_bttn {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
 
 /*# sourceMappingURL=/styles.8986bff4.css.map */

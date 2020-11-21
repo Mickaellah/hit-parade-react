@@ -44,6 +44,11 @@ function ContextProvider(props) {
         setCartItems(prevItems => [...prevItems, song]);
     }
 
+    function removeFromCart(id) {
+        setCartItems(prevItems => prevItems.filter(item => item.id !== id));
+        console.log('I am deleted');
+    }
+
     function getSongLyrics(songLyrics) {
         setLyrics(prevItems => [...prevItems, songLyrics]);
         console.log(lyrics);
@@ -56,7 +61,7 @@ function ContextProvider(props) {
     });
 
     return (
-        <Context.Provider value={{songs, sortedSong, cartItems, addToCart, upVotesIncreament, downVotesIncreament, toggleFavorite, getSongLyrics}}>
+        <Context.Provider value={{songs, sortedSong, cartItems, addToCart, upVotesIncreament, downVotesIncreament, toggleFavorite, getSongLyrics, removeFromCart}}>
             {props.children}
         </Context.Provider>
     )

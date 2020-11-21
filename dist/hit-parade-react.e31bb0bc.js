@@ -33996,6 +33996,11 @@ function ContextProvider(props) {
     setCartItems(prevItems => [...prevItems, song]);
   }
 
+  function removeFromCart(id) {
+    setCartItems(prevItems => prevItems.filter(item => item.id !== id));
+    console.log('I am deleted');
+  }
+
   function getSongLyrics(songLyrics) {
     setLyrics(prevItems => [...prevItems, songLyrics]);
     console.log(lyrics);
@@ -34015,7 +34020,8 @@ function ContextProvider(props) {
       upVotesIncreament,
       downVotesIncreament,
       toggleFavorite,
-      getSongLyrics
+      getSongLyrics,
+      removeFromCart
     }
   }, props.children);
 }
@@ -34247,25 +34253,39 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = CartItem;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = _interopRequireWildcard(require("react"));
 
 var _trash = _interopRequireDefault(require("../svg/trash.svg"));
 
+var _Context = require("../Context");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function CartItem({
   item
 }) {
+  const {
+    removeFromCart
+  } = (0, _react.useContext)(_Context.Context);
   return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("article", {
     className: "cart_item"
-  }, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("img", {
+  }, /*#__PURE__*/_react.default.createElement("button", {
+    className: "delete_bttn",
+    id: item.id,
+    onClick: () => removeFromCart(item.id)
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    id: item.id,
     src: _trash.default,
     alt: "delete icon"
   })), /*#__PURE__*/_react.default.createElement("div", {
     className: "cart_title"
   }, /*#__PURE__*/_react.default.createElement("h3", null, item.title), /*#__PURE__*/_react.default.createElement("p", null, item.singer)), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("p", null, item.price))));
 }
-},{"react":"node_modules/react/index.js","../svg/trash.svg":"svg/trash.svg"}],"pages/Cart.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../svg/trash.svg":"svg/trash.svg","../Context":"Context.js"}],"pages/Cart.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
