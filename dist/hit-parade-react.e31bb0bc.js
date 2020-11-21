@@ -33923,14 +33923,14 @@ module.exports = [{
   "lyrics": "Na tsy nilaza ianao oa efa fantatro Efa tsapako Efa takatro Sipa ianao fa za koa anie oa Mec e Mbola hoavy ny anjara fa aza maika e Fa tsy ny fotsy no forcenao ho mainty e Ouzy ny atagny atagnana hoe Tsa mety e Marina hoe mandeha ny mandeha ...Mandeha Ny accelerateur anao lasa manitsaka be Asivo retrograde ... Sipa anie enao fa tsy bandy Sprinter mavesatra ary mivarina any ankady e Raisiko ho toy ny anabavy... Hanaovako azafady Mba mananatra anao za fa tsy hoe mavandy Oh bavy e...oh bavy e...oh bavy e Sao tifiriny eny ampanidinana eny e Fa milalao flesy doro akia ny jiolamboto amzao Oh mba fahotana mafaty anie ry Neny e Sao hienjera avy eny ambony be ka haratra eo ianao Fomban'ny jiolahimboto ny mody mitomany Tsy fantatrao izay tena any antsainy any Raha vao ianao manaiky mitsilany D'efa sakafo any anaty vilaniny a Kozy e Mivantana lay kozy fa mamelà Kopy agamba bavy fa zah lehilahy Zay mankarary anao dia lasa mamely ahy Mandehana moramora neny a Fefa nahita fiainana ny zokinao ye Raha zay fahafinaretana tsy avoky anao ya Ataovy tsara hidy aloha ny bokinao ye Tsy tranombokimpirenena akory ny vatanao ya Tiako ianao any aoriana anambady e Fa tsy hitomany dia anozona bandy e Tiako ianao ho fitaratr'ireo zandry Hoe tsy mba nahafaty antoka ny niandry Ny adalan'ny hafa no iomehazana Fa ny adalan'ny tena tafiana lamba Oh bavy e...oh bavy e...oh bavy e Sao tifiriny eny ampanidinana eny e Fa milalao flesy doro akia ny jiolamboto amzao Oh mba fahotana mafaty anie ry Neny e Sao hienjera avy eny ambony be ka haratra eo ianao",
   "id": "1605846031136"
 }, {
-  "title": "Inty Ray",
-  "singer": "Myrindra",
-  "style": "slow",
+  "title": "Mionona",
+  "singer": "Johane",
+  "style": "Jazz",
   "isFavorited": false,
   "upVotes": 50,
   "downVotes": 21,
   "price": "800 Ar",
-  "lyrics": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+  "lyrics": "Angamba tsy hainao,Yeah Fa ny nataonao ihany no nahatonga anah otrizao Ny alaeloko sy ranomasoko lava Ny tomany,tanondrika nanary lamba Tsy ho adinoko angamba Nefa voamaika nataoko ny hampitraka anah Tsy nataoko ho sakana Nozakaiko ho anah irery ny mahazo anah Tsy ianao no ande ho andrasana Ref:(x2) Fa ny aty ko malala mionona e Mahay miala fa tsy mila atorona e Mahay mandrava dia mahay manorona e Tsy ela,tsy ela dia mahita solony e Ka tsy izaho anie ny ande ampivarilava anao sy ampijaly lava anao Fa misy anie vonona hitia sy hanaja anao Efa ela no niandry anao Ayeeeee Fa ny atao hoe fitia tena tsara tsy mety lany Tonga ho azy eo foana io fa aza manahy izany Ny anjara koa tsy azo terena Izay tonga eo no atrehana Rehefa voa dia manony tena a Hita avy eo izay fandehany",
   "id": "1605846002717"
 }];
 },{}],"Context.js":[function(require,module,exports) {
