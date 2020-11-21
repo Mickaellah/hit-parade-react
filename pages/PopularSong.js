@@ -70,7 +70,7 @@ export default function PopularSong() {
                         </div>
                         <div>
                             <Link to="/lyrics">
-                                <img onClick={() => getSongLyrics(song.id)} src={lyrics} alt="song lyrics" />
+                                <img onClick={() => getSongLyrics(song)} src={lyrics} alt="song lyrics" />
                             </Link>
                         </div>
                     </article>

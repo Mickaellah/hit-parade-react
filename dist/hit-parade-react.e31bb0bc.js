@@ -33960,7 +33960,7 @@ function ContextProvider(props) {
   const [songs, setSongs] = (0, _react.useState)([]);
   const [cartItems, setCartItems] = (0, _react.useState)([]);
   const [count, setCount] = (0, _react.useState)(0);
-  const [lyrics, setLyrics] = (0, _react.useState)({});
+  const [lyrics, setLyrics] = (0, _react.useState)([]);
   (0, _react.useEffect)(() => {
     setSongs(_SongsData.default);
   }, []);
@@ -33994,13 +33994,11 @@ function ContextProvider(props) {
 
   function addToCart(song) {
     setCartItems(prevItems => [...prevItems, song]);
-    console.log(cartItems);
   }
 
   function getSongLyrics(songLyrics) {
-    setLyrics({ ...lyrics,
-      songLyrics
-    });
+    setLyrics(prevItems => [...prevItems, songLyrics]);
+    console.log(lyrics);
   }
 
   const sortedSong = songs.sort((songX, songY) => {
@@ -34126,7 +34124,7 @@ function PopularSong() {
     }))), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
       to: "/lyrics"
     }, /*#__PURE__*/_react.default.createElement("img", {
-      onClick: () => getSongLyrics(song.id),
+      onClick: () => getSongLyrics(song),
       src: _lyrics.default,
       alt: "song lyrics"
     }))));

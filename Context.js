@@ -7,7 +7,7 @@ function ContextProvider(props) {
     const [ songs, setSongs ] = useState([]);
     const [ cartItems, setCartItems ] = useState([]);
     const [ count, setCount ] = useState(0);
-    const [ lyrics, setLyrics ] = useState({});
+    const [ lyrics, setLyrics ] = useState([]);
 
     useEffect(() => {
         setSongs(SongData);
@@ -42,11 +42,11 @@ function ContextProvider(props) {
 
     function addToCart(song) {
         setCartItems(prevItems => [...prevItems, song]);
-        console.log(cartItems);
     }
 
     function getSongLyrics(songLyrics) {
-        setLyrics({...lyrics, songLyrics});
+        setLyrics(prevItems => [...prevItems, songLyrics]);
+        console.log(lyrics);
     }
 
     const sortedSong = songs.sort((songX, songY) => {

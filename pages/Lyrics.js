@@ -4,10 +4,13 @@ import {Context} from '../Context';
 import LyricsComponent from '../components/LyricsComponent';
 
 export default function Lyrics() {
-    const {getSongLyrics} = useContext(Context);
+    const {lyrics} = useContext(Context);
+    const songLyrics = lyrics.map(item => (
+        <LyricsComponent key={item.id} item={item} />
+    ))
     return (
         <div>
-            <LyricsComponent songLyrics={}/>
+            {songLyrics}
         </div>
     )
 }

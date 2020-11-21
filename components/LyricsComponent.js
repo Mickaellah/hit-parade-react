@@ -1,18 +1,11 @@
-import React, {useContext} from 'react';
-import {Context} from '../Context';
+import React from 'react';
 
-export default function LyricsComponent() {
-    const context = useContext(Context);
-    const lsSong = context.songs;
+export default function LyricsComponent({item}) {
     return (
         <div>
-            {lsSong.map(song => {
-                return (
-                    <div key={song.id}>
-                        <p>{song.lyrics}</p>
-                    </div>
-                )
-            })}
+            <p>
+                {item.lyrics}
+            </p>
         </div>
     )
 }
