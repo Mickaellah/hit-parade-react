@@ -7,7 +7,6 @@ function ContextProvider(props) {
     const [ songs, setSongs ] = useState([]);
     const [ cartItems, setCartItems ] = useState([]);
     const [ count, setCount ] = useState(0);
-    const [ lyrics, setLyrics ] = useState([]);
 
     useEffect(() => {
         setSongs(SongData);
@@ -49,11 +48,6 @@ function ContextProvider(props) {
         console.log('I am deleted');
     }
 
-    function getSongLyrics(songLyrics) {
-        setLyrics(prevItems => [...prevItems, songLyrics]);
-        console.log(lyrics);
-    }
-
     const sortedSong = songs.sort((songX, songY) => {
         const ratioX = songX.upVotes - songX.downVotes;
         const ratioY = songY.upVotes - songY.downVotes;
@@ -61,7 +55,7 @@ function ContextProvider(props) {
     });
 
     return (
-        <Context.Provider value={{songs, sortedSong, cartItems, addToCart, upVotesIncreament, downVotesIncreament, toggleFavorite, getSongLyrics, removeFromCart}}>
+        <Context.Provider value={{songs, sortedSong, cartItems, addToCart, upVotesIncreament, downVotesIncreament, toggleFavorite, removeFromCart}}>
             {props.children}
         </Context.Provider>
     )

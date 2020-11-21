@@ -1,16 +1,16 @@
 import React, {useContext} from 'react'
 import {Context} from '../Context';
 
-import LyricsComponent from '../components/LyricsComponent';
+import {useParams} from 'react-router-dom';
 
 export default function Lyrics() {
-    const {lyrics} = useContext(Context);
-    const songLyrics = lyrics.map(item => (
-        <LyricsComponent key={item.id} item={item} />
-    ))
+    const {songId} = useParams();
+    const {songs} = useContext(Context);
+    const songLyrics = songs.find(song => song.id === songId);
+    console.log(songLyrics);
     return (
         <div>
-            {songLyrics}
+            {songLyrics.lyrics}
         </div>
     )
 }

@@ -6,13 +6,13 @@ import {
 	Route,
 } from 'react-router-dom';
 
-import songs from '../SongsData.json';
 import Header from '../components/Header';
 
 import PopularSong from '../pages/PopularSong';
 import Styles from '../pages/Styles';
 import Add from '../pages/Add';
 import Cart from '../pages/Cart';
+import Lyrics from '../pages/Lyrics';
 
 function Main() {
     return (
@@ -29,8 +29,11 @@ function Main() {
                     <Route exact path="/add">
                         <Add />
                     </Route>
-                    <Route path="/cart">
+                    <Route exact path="/cart">
                         <Cart />
+                    </Route>
+                    <Route path="/song/:songId">
+                        <Lyrics />
                     </Route>
                 </Switch>
             </Router>

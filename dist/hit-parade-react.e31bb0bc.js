@@ -33853,49 +33853,7 @@ if ("development" !== "production") {
     style: _propTypes.default.object
   });
 }
-},{"react-router":"node_modules/react-router/esm/react-router.js","@babel/runtime/helpers/esm/inheritsLoose":"node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"node_modules/react/index.js","history":"node_modules/history/esm/history.js","prop-types":"node_modules/prop-types/index.js","tiny-warning":"node_modules/tiny-warning/dist/tiny-warning.esm.js","@babel/runtime/helpers/esm/extends":"node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","tiny-invariant":"node_modules/tiny-invariant/dist/tiny-invariant.esm.js"}],"SongsData.json":[function(require,module,exports) {
-module.exports = [{
-  "title": "Avelao",
-  "singer": "Chantal",
-  "style": "slow",
-  "isFavorited": false,
-  "upVotes": 15,
-  "downVotes": 13,
-  "price": "1000 Ar",
-  "lyrics": "Nahatsiaro marary ianao nilaozany Nitondra ny mangidy ianao fa... Tsy tsapany hoe ianao no tena Tia azy Naleony nitady Vaovao... Ny rehetra rehetra efa nafoinao ho azy; Hatramin'izay sarobidy indrindra. Hanenina ihany izy any aorina any Hiverina eo hitady anao indray   REF : Avelao izy handeha Hanalavitra anao any Aza miaritra tomany Fa tsofy rano izy Ataovy an-tsaina hoe Ny tia anao tsy izy irery ihany Fa mbola betsaka any ho any Afaka hitia anao mandrakizay 2. Izy ihany no tompon-tsafidy Ianao tsy afaka hanery azy handidy Manorata tantara Vaovao Eo anilan'ilay tena tia anao ho mandrakizay. Dia tsy ho latsaka intsony ranomasonao Fa fianam-baovao lavitry ny alahelo Ka fafao ny ranomasonao Izy iny anie tsy anjaranao! REF : Avelao izy handeha Hanalavitra anao any Aza miaritra tomany Fa tsofy rano izy Ataovy an-tsaina hoe Ny tia anao tsy izy irery ihany Fa mbola betsaka any ho any Afaka hitia anao mandrakizay Avelao izy handeha (3) Avelao (Fa tsy tia anao intsony) REF : Avelao izy handeha Hanalavitra anao any Aza miaritra tomany Fa tsofy rano izy Ataovy an-tsaina hoe Ny tia anao tsy izy irery ihany Fa mbola betsaka any ho any Afaka hitia anao mandrakizay",
-  "id": "1605846105310"
-}, {
-  "title": "Feno anao",
-  "singer": "Marion",
-  "style": "slow",
-  "isFavorited": true,
-  "upVotes": 23,
-  "downVotes": 6,
-  "price": "1200 Ar",
-  "lyrics": "Toa tsy mety mitony, ny ao anatiko ao Te hilaza aminao, nefa miahotr’aho Njao mientana ny fo, manoloana anao Na ny mora indrindra aza, lasa sarotra Matokia foana ihany kanefa aza manahy Aleo hibitsika mangina ny ao antiko ao Efa feno anao, 'zao tontolo rehetra izao Fa raha tsy eo ianao, toa tsy mety izay atao Anio raha sitrakao, tsorina eto indray Ho anao, ho anao,ho anao Ny foko anjakao Ny efa vita taloha, misy ho visavisaina Ny anio, lay fitia vaovao ndray no andrandraina Samy tia tao am-po, miandry ny maraina Efa fiainana vaovao manombok’eto ataovy an-tsaina Matokia foana ihany kanefa aza manahy Aleo hibitsika mangina ny ao antiko ao Efa feno anao, 'zao tontolo rehetra izao Fa raha tsy eo ianao, toa tsy mety izay atao Anio raha sitrakao, tsorina eto indray Ho anao, ho anao,ho anao Ny foko anjakao Ny mpanenjika, tsy tia ho romotra tsy maintsy hiteny Ho avy ny andro ratsy ho resintsika ireny Efa feno anao, 'Zao ny tontolo rehetra izao Fa raha tsy eo ianao, toa tsy mety izay atao Anio raha sitrakao, tsorina eto indray Ho anao, ho anao,ho anao ny foko anjakao",
-  "id": "1605846029600"
-}, {
-  "title": "Bavy",
-  "singer": "Mr Sayd",
-  "style": "rock",
-  "isFavorited": true,
-  "upVotes": 9,
-  "downVotes": 2,
-  "price": "1500 Ar",
-  "lyrics": "Na tsy nilaza ianao oa efa fantatro Efa tsapako Efa takatro Sipa ianao fa za koa anie oa Mec e Mbola hoavy ny anjara fa aza maika e Fa tsy ny fotsy no forcenao ho mainty e Ouzy ny atagny atagnana hoe Tsa mety e Marina hoe mandeha ny mandeha ... Mandeha Ny accelerateur anao lasa manitsaka be Asivo retrograde ... Sipa anie enao fa tsy bandy Sprinter mavesatra ary mivarina any ankady e Raisiko ho toy ny anabavy... Hanaovako azafady Mba mananatra anao za fa tsy hoe mavandy Oh bavy e...oh bavy e...oh bavy e Sao tifiriny eny ampanidinana eny e Fa milalao flesy doro akia ny jiolamboto amzao Oh mba fahotana mafaty anie ry Neny e Sao hienjera avy eny ambony be ka haratra eo ianao Fomban'ny jiolahimboto ny mody mitomany Tsy fantatrao izay tena any antsainy any Raha vao ianao manaiky mitsilany D'efa sakafo any anaty vilaniny a Kozy e Mivantana lay kozy fa mamelà Kopy agamba bavy fa zah lehilahy Zay mankarary anao dia lasa mamely ahy Mandehana moramora neny a Fefa nahita fiainana ny zokinao ye Raha zay fahafinaretana tsy avoky anao ya Ataovy tsara hidy aloha ny bokinao ye Tsy tranombokimpirenena akory ny vatanao ya Tiako ianao any aoriana anambady e Fa tsy hitomany dia anozona bandy e Tiako ianao ho fitaratr'ireo zandry Hoe tsy mba nahafaty antoka ny niandry Ny adalan'ny hafa no iomehazana Fa ny adalan'ny tena tafiana lamba Oh bavy e...oh bavy e...oh bavy e Sao tifiriny eny ampanidinana eny e Fa milalao flesy doro akia ny jiolamboto amzao Oh mba fahotana mafaty anie ry Neny e Sao hienjera avy eny ambony be ka haratra eo ianao",
-  "id": "1605846031136"
-}, {
-  "title": "Inty Ray",
-  "singer": "Myrindra",
-  "style": "slow",
-  "isFavorited": false,
-  "upVotes": 50,
-  "downVotes": 21,
-  "price": "800 Ar",
-  "lyrics": "",
-  "id": "1605846002717"
-}];
-},{}],"svg/shopping_cart-24px.svg":[function(require,module,exports) {
+},{"react-router":"node_modules/react-router/esm/react-router.js","@babel/runtime/helpers/esm/inheritsLoose":"node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"node_modules/react/index.js","history":"node_modules/history/esm/history.js","prop-types":"node_modules/prop-types/index.js","tiny-warning":"node_modules/tiny-warning/dist/tiny-warning.esm.js","@babel/runtime/helpers/esm/extends":"node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","tiny-invariant":"node_modules/tiny-invariant/dist/tiny-invariant.esm.js"}],"svg/shopping_cart-24px.svg":[function(require,module,exports) {
 module.exports = "/shopping_cart-24px.d1303fd9.svg";
 },{}],"components/Header.js":[function(require,module,exports) {
 "use strict";
@@ -33933,7 +33891,49 @@ function Header() {
     alt: "Shopping cart"
   }), /*#__PURE__*/_react.default.createElement("p", null, "Cart"))));
 }
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../svg/shopping_cart-24px.svg":"svg/shopping_cart-24px.svg"}],"Context.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../svg/shopping_cart-24px.svg":"svg/shopping_cart-24px.svg"}],"SongsData.json":[function(require,module,exports) {
+module.exports = [{
+  "title": "Avelao",
+  "singer": "Chantal",
+  "style": "slow",
+  "isFavorited": false,
+  "upVotes": 15,
+  "downVotes": 13,
+  "price": "1000 Ar",
+  "lyrics": "Nahatsiaro marary ianao nilaozany Nitondra ny mangidy ianao fa... Tsy tsapany hoe ianao no tena Tia azy Naleony nitady Vaovao... Ny rehetra rehetra efa nafoinao ho azy; Hatramin'izay sarobidy indrindra. Hanenina ihany izy any aorina any Hiverina eo hitady anao indray   REF : Avelao izy handeha Hanalavitra anao any Aza miaritra tomany Fa tsofy rano izy Ataovy an-tsaina hoe Ny tia anao tsy izy irery ihany Fa mbola betsaka any ho any Afaka hitia anao mandrakizay 2. Izy ihany no tompon-tsafidy Ianao tsy afaka hanery azy handidy Manorata tantara Vaovao Eo anilan'ilay tena tia anao ho mandrakizay. Dia tsy ho latsaka intsony ranomasonao Fa fianam-baovao lavitry ny alahelo Ka fafao ny ranomasonao Izy iny anie tsy anjaranao! REF : Avelao izy handeha Hanalavitra anao any Aza miaritra tomany Fa tsofy rano izy Ataovy an-tsaina hoe Ny tia anao tsy izy irery ihany Fa mbola betsaka any ho any Afaka hitia anao mandrakizay Avelao izy handeha (3) Avelao (Fa tsy tia anao intsony) REF : Avelao izy handeha Hanalavitra anao any Aza miaritra tomany Fa tsofy rano izy Ataovy an-tsaina hoe Ny tia anao tsy izy irery ihany Fa mbola betsaka any ho any Afaka hitia anao mandrakizay",
+  "id": "1605846105310"
+}, {
+  "title": "Feno anao",
+  "singer": "Marion",
+  "style": "slow",
+  "isFavorited": true,
+  "upVotes": 23,
+  "downVotes": 6,
+  "price": "1200 Ar",
+  "lyrics": "Toa tsy mety mitony, ny ao anatiko ao Te hilaza aminao, nefa miahotr’aho Njao mientana ny fo, manoloana anao Na ny mora indrindra aza, lasa sarotra Matokia foana ihany kanefa aza manahy Aleo hibitsika mangina ny ao antiko ao Efa feno anao, 'zao tontolo rehetra izao Fa raha tsy eo ianao, toa tsy mety izay atao Anio raha sitrakao, tsorina eto indray Ho anao, ho anao,ho anao Ny foko anjakao Ny efa vita taloha, misy ho visavisaina Ny anio, lay fitia vaovao ndray no andrandraina Samy tia tao am-po, miandry ny maraina Efa fiainana vaovao manombok’eto ataovy an-tsaina Matokia foana ihany kanefa aza manahy Aleo hibitsika mangina ny ao antiko ao Efa feno anao, 'zao tontolo rehetra izao Fa raha tsy eo ianao, toa tsy mety izay atao Anio raha sitrakao, tsorina eto indray Ho anao, ho anao,ho anao Ny foko anjakao Ny mpanenjika, tsy tia ho romotra tsy maintsy hiteny Ho avy ny andro ratsy ho resintsika ireny Efa feno anao, 'Zao ny tontolo rehetra izao Fa raha tsy eo ianao, toa tsy mety izay atao Anio raha sitrakao, tsorina eto indray Ho anao, ho anao,ho anao ny foko anjakao",
+  "id": "1605846029600"
+}, {
+  "title": "Bavy",
+  "singer": "Mr Sayd",
+  "style": "rock",
+  "isFavorited": true,
+  "upVotes": 9,
+  "downVotes": 2,
+  "price": "1500 Ar",
+  "lyrics": "Na tsy nilaza ianao oa efa fantatro Efa tsapako Efa takatro Sipa ianao fa za koa anie oa Mec e Mbola hoavy ny anjara fa aza maika e Fa tsy ny fotsy no forcenao ho mainty e Ouzy ny atagny atagnana hoe Tsa mety e Marina hoe mandeha ny mandeha ...Mandeha Ny accelerateur anao lasa manitsaka be Asivo retrograde ... Sipa anie enao fa tsy bandy Sprinter mavesatra ary mivarina any ankady e Raisiko ho toy ny anabavy... Hanaovako azafady Mba mananatra anao za fa tsy hoe mavandy Oh bavy e...oh bavy e...oh bavy e Sao tifiriny eny ampanidinana eny e Fa milalao flesy doro akia ny jiolamboto amzao Oh mba fahotana mafaty anie ry Neny e Sao hienjera avy eny ambony be ka haratra eo ianao Fomban'ny jiolahimboto ny mody mitomany Tsy fantatrao izay tena any antsainy any Raha vao ianao manaiky mitsilany D'efa sakafo any anaty vilaniny a Kozy e Mivantana lay kozy fa mamelà Kopy agamba bavy fa zah lehilahy Zay mankarary anao dia lasa mamely ahy Mandehana moramora neny a Fefa nahita fiainana ny zokinao ye Raha zay fahafinaretana tsy avoky anao ya Ataovy tsara hidy aloha ny bokinao ye Tsy tranombokimpirenena akory ny vatanao ya Tiako ianao any aoriana anambady e Fa tsy hitomany dia anozona bandy e Tiako ianao ho fitaratr'ireo zandry Hoe tsy mba nahafaty antoka ny niandry Ny adalan'ny hafa no iomehazana Fa ny adalan'ny tena tafiana lamba Oh bavy e...oh bavy e...oh bavy e Sao tifiriny eny ampanidinana eny e Fa milalao flesy doro akia ny jiolamboto amzao Oh mba fahotana mafaty anie ry Neny e Sao hienjera avy eny ambony be ka haratra eo ianao",
+  "id": "1605846031136"
+}, {
+  "title": "Inty Ray",
+  "singer": "Myrindra",
+  "style": "slow",
+  "isFavorited": false,
+  "upVotes": 50,
+  "downVotes": 21,
+  "price": "800 Ar",
+  "lyrics": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+  "id": "1605846002717"
+}];
+},{}],"Context.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -33960,7 +33960,6 @@ function ContextProvider(props) {
   const [songs, setSongs] = (0, _react.useState)([]);
   const [cartItems, setCartItems] = (0, _react.useState)([]);
   const [count, setCount] = (0, _react.useState)(0);
-  const [lyrics, setLyrics] = (0, _react.useState)([]);
   (0, _react.useEffect)(() => {
     setSongs(_SongsData.default);
   }, []);
@@ -34001,11 +34000,6 @@ function ContextProvider(props) {
     console.log('I am deleted');
   }
 
-  function getSongLyrics(songLyrics) {
-    setLyrics(prevItems => [...prevItems, songLyrics]);
-    console.log(lyrics);
-  }
-
   const sortedSong = songs.sort((songX, songY) => {
     const ratioX = songX.upVotes - songX.downVotes;
     const ratioY = songY.upVotes - songY.downVotes;
@@ -34020,7 +34014,6 @@ function ContextProvider(props) {
       upVotesIncreament,
       downVotesIncreament,
       toggleFavorite,
-      getSongLyrics,
       removeFromCart
     }
   }, props.children);
@@ -34128,9 +34121,8 @@ function PopularSong() {
       src: _shopping_cart24px.default,
       alt: "shopping cart"
     }))), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-      to: "/lyrics"
+      to: `/song/${song.id}`
     }, /*#__PURE__*/_react.default.createElement("img", {
-      onClick: () => getSongLyrics(song),
       src: _lyrics.default,
       alt: "song lyrics"
     }))));
@@ -34320,7 +34312,36 @@ function Cart() {
     type: "button"
   }, "Buy"), /*#__PURE__*/_react.default.createElement("p", null, "Total: ")));
 }
-},{"react":"node_modules/react/index.js","../Context":"Context.js","../components/CartItem":"components/CartItem.js"}],"components/Main.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../Context":"Context.js","../components/CartItem":"components/CartItem.js"}],"pages/Lyrics.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Lyrics;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _Context = require("../Context");
+
+var _reactRouterDom = require("react-router-dom");
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function Lyrics() {
+  const {
+    songId
+  } = (0, _reactRouterDom.useParams)();
+  const {
+    songs
+  } = (0, _react.useContext)(_Context.Context);
+  const songLyrics = songs.find(song => song.id === songId);
+  console.log(songLyrics);
+  return /*#__PURE__*/_react.default.createElement("div", null, songLyrics.lyrics);
+}
+},{"react":"node_modules/react/index.js","../Context":"Context.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"components/Main.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34332,8 +34353,6 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactRouterDom = require("react-router-dom");
 
-var _SongsData = _interopRequireDefault(require("../SongsData.json"));
-
 var _Header = _interopRequireDefault(require("../components/Header"));
 
 var _PopularSong = _interopRequireDefault(require("../pages/PopularSong"));
@@ -34343,6 +34362,8 @@ var _Styles = _interopRequireDefault(require("../pages/Styles"));
 var _Add = _interopRequireDefault(require("../pages/Add"));
 
 var _Cart = _interopRequireDefault(require("../pages/Cart"));
+
+var _Lyrics = _interopRequireDefault(require("../pages/Lyrics"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -34357,13 +34378,16 @@ function Main() {
     exact: true,
     path: "/add"
   }, /*#__PURE__*/_react.default.createElement(_Add.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+    exact: true,
     path: "/cart"
-  }, /*#__PURE__*/_react.default.createElement(_Cart.default, null)))));
+  }, /*#__PURE__*/_react.default.createElement(_Cart.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+    path: "/song/:songId"
+  }, /*#__PURE__*/_react.default.createElement(_Lyrics.default, null)))));
 }
 
 var _default = Main;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../SongsData.json":"SongsData.json","../components/Header":"components/Header.js","../pages/PopularSong":"pages/PopularSong.js","../pages/Styles":"pages/Styles.js","../pages/Add":"pages/Add.js","../pages/Cart":"pages/Cart.js"}],"App.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../components/Header":"components/Header.js","../pages/PopularSong":"pages/PopularSong.js","../pages/Styles":"pages/Styles.js","../pages/Add":"pages/Add.js","../pages/Cart":"pages/Cart.js","../pages/Lyrics":"pages/Lyrics.js"}],"App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
