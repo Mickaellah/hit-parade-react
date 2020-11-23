@@ -15,14 +15,14 @@ function ContextProvider(props) {
 
     function upVotesIncreament(e) {
         const id = e.target.id;
-        const findId = songs.find(item => item.id === id);
+        const findId = songs.find(item => item.id == id);
         const upVotes = findId.upVotes++;
         setCount(upVotes);
     }
 
     function downVotesIncreament(e) {
         const id = e.target.id;
-        const findId = songs.find(item => item.id === id);
+        const findId = songs.find(item => item.id == id);
         const downVotes = findId.downVotes++;
         setCount(downVotes);
     }

@@ -33967,14 +33967,14 @@ function ContextProvider(props) {
 
   function upVotesIncreament(e) {
     const id = e.target.id;
-    const findId = songs.find(item => item.id === id);
+    const findId = songs.find(item => item.id == id);
     const upVotes = findId.upVotes++;
     setCount(upVotes);
   }
 
   function downVotesIncreament(e) {
     const id = e.target.id;
-    const findId = songs.find(item => item.id === id);
+    const findId = songs.find(item => item.id == id);
     const downVotes = findId.downVotes++;
     setCount(downVotes);
   }
@@ -34373,7 +34373,7 @@ function Lyrics() {
   const {
     songs
   } = (0, _react.useContext)(_Context.Context);
-  const songLyrics = songs.find(song => song.id === songId);
+  const songLyrics = songs.find(song => song.id == songId);
   console.log(songLyrics);
   return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h2", null, songLyrics.singer, ": ", songLyrics.title), /*#__PURE__*/_react.default.createElement("div", {
     className: "lyrics_container"
@@ -34537,7 +34537,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61910" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65485" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
