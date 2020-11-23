@@ -34024,11 +34024,6 @@ function ContextProvider(props) {
     setSongs([...songs, newSong]);
   };
 
-  function handleChange(e) {
-    setNewSongs(e.target.value);
-    console.log(e.target.value);
-  }
-
   const sortedSong = songs.sort((songX, songY) => {
     const ratioX = songX.upVotes - songX.downVotes;
     const ratioY = songY.upVotes - songY.downVotes;
@@ -34045,7 +34040,6 @@ function ContextProvider(props) {
       toggleFavorite,
       removeFromCart,
       addNewSongs,
-      handleChange,
       newSongs
     }
   }, props.children);
@@ -34539,7 +34533,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65485" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52633" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
