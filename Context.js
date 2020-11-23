@@ -60,7 +60,7 @@ function ContextProvider(props) {
             isFavorited: false,
             upVotes: 0,
             downVotes: 0,
-            price: price.value,
+            price: price.value + ' ' + 'Ar',
             lyrics: lyrics.value,
             id: Date.now()
         }

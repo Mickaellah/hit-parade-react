@@ -7,7 +7,7 @@ export default function Lyrics() {
     const {songId} = useParams();
     const {songs} = useContext(Context);
     const songLyrics = songs.find(song => song.id == songId);
-    console.log(songLyrics);
+
     return (
         <div>
             <h2>{songLyrics.singer}: {songLyrics.title}</h2>

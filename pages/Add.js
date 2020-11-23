@@ -8,9 +8,9 @@ export default function Add() {
             <h2>Add a new song</h2>
             <form onSubmit={addNewSongs} className="add_form">
                 <div className="input_container">
-                    <input id="title" name="title" placeholder="Title"/>
-                    <input id="artist" name="artist" placeholder="Artist" />
-                    <input id="price" name="price" placeholder="Price" />
+                    <input id="title" type="text" name="title" placeholder="Title"/>
+                    <input id="artist" type="text" name="artist" placeholder="Artist" />
+                    <input id="price" type="number" name="price" placeholder="Price" />
                     <select name="style" id="style">
                         <option value="style">Style</option>
                         <option value="rnb">Rnb</option>

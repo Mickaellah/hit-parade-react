@@ -10,6 +10,10 @@ h1 {
     font-size: 36px;
 }
 
+button {
+    cursor: pointer;
+}
+
 .pages {
     display: flex;
     flex-direction: row;
@@ -41,6 +45,7 @@ h1 {
     flex-direction: row;
     justify-content: space-around;
     background-color: black;
+    border-radius: 12px;
     color: white;
     padding: 32px;
     margin-block: 16px;
@@ -130,6 +135,7 @@ textarea {
 
 .cart_item {
     background-color: black;
+    border-radius: 12px;
     color: white;
     display: flex;
     flex-direction: row;
@@ -178,10 +184,12 @@ textarea {
     padding: 32px;
     color: white;
     background-color: black;
+    border-radius: 12px;
 }
 
 .lyrics_container {
     padding: 32px;
     background-color: black;
+    border-radius: 12px;
     color: white;
 }

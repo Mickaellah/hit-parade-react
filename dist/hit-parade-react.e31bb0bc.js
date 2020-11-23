@@ -34017,7 +34017,7 @@ function ContextProvider(props) {
       isFavorited: false,
       upVotes: 0,
       downVotes: 0,
-      price: price.value,
+      price: price.value + ' ' + 'Ar',
       lyrics: lyrics.value,
       id: Date.now()
     };
@@ -34229,14 +34229,17 @@ function Add() {
     className: "input_container"
   }, /*#__PURE__*/_react.default.createElement("input", {
     id: "title",
+    type: "text",
     name: "title",
     placeholder: "Title"
   }), /*#__PURE__*/_react.default.createElement("input", {
     id: "artist",
+    type: "text",
     name: "artist",
     placeholder: "Artist"
   }), /*#__PURE__*/_react.default.createElement("input", {
     id: "price",
+    type: "number",
     name: "price",
     placeholder: "Price"
   }), /*#__PURE__*/_react.default.createElement("select", {
@@ -34374,7 +34377,6 @@ function Lyrics() {
     songs
   } = (0, _react.useContext)(_Context.Context);
   const songLyrics = songs.find(song => song.id == songId);
-  console.log(songLyrics);
   return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h2", null, songLyrics.singer, ": ", songLyrics.title), /*#__PURE__*/_react.default.createElement("div", {
     className: "lyrics_container"
   }, /*#__PURE__*/_react.default.createElement("h3", null, "Lyrics"), /*#__PURE__*/_react.default.createElement("p", null, songLyrics.lyrics)));
