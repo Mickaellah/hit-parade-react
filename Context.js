@@ -13,6 +13,19 @@ function ContextProvider(props) {
         setSongs(SongData);
     }, [])
 
+    function toggleFavorite(id) {
+        const newSongArray = songs.map(song => {
+            if (song.id === id) {
+                return {
+                    ...song,
+                    isFavorited: !song.isFavorited,
+                };
+            }
+            return song;
+        });
+        setSongs(newSongArray);
+    }
+
     function upVotesIncreament(e) {
         const id = e.target.id;
         const findId = songs.find(item => item.id == id);
@@ -25,19 +38,6 @@ function ContextProvider(props) {
         const findId = songs.find(item => item.id == id);
         const downVotes = findId.downVotes++;
         setCount(downVotes);
-    }
-
-    function toggleFavorite(id) {
-        const newSongArray = songs.map(song => {
-            if (song.id === id) {
-                return {
-                    ...song,
-                    isFavorited: !song.isFavorited,
-                };
-            }
-            return song;
-        });
-        setSongs(newSongArray);
     }
 
     function addToCart(song) {

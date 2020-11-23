@@ -33965,6 +33965,19 @@ function ContextProvider(props) {
     setSongs(_SongsData.default);
   }, []);
 
+  function toggleFavorite(id) {
+    const newSongArray = songs.map(song => {
+      if (song.id === id) {
+        return { ...song,
+          isFavorited: !song.isFavorited
+        };
+      }
+
+      return song;
+    });
+    setSongs(newSongArray);
+  }
+
   function upVotesIncreament(e) {
     const id = e.target.id;
     const findId = songs.find(item => item.id == id);
@@ -33977,19 +33990,6 @@ function ContextProvider(props) {
     const findId = songs.find(item => item.id == id);
     const downVotes = findId.downVotes++;
     setCount(downVotes);
-  }
-
-  function toggleFavorite(id) {
-    const newSongArray = songs.map(song => {
-      if (song.id === id) {
-        return { ...song,
-          isFavorited: !song.isFavorited
-        };
-      }
-
-      return song;
-    });
-    setSongs(newSongArray);
   }
 
   function addToCart(song) {
@@ -34225,17 +34225,20 @@ function Add() {
     id: "title",
     type: "text",
     name: "title",
-    placeholder: "Title"
+    placeholder: "Title",
+    required: true
   }), /*#__PURE__*/_react.default.createElement("input", {
     id: "artist",
     type: "text",
     name: "artist",
-    placeholder: "Artist"
+    placeholder: "Artist",
+    required: true
   }), /*#__PURE__*/_react.default.createElement("input", {
     id: "price",
     type: "number",
     name: "price",
-    placeholder: "Price"
+    placeholder: "Price",
+    required: true
   }), /*#__PURE__*/_react.default.createElement("select", {
     name: "style",
     id: "style"
