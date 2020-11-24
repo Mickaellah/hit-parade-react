@@ -33962,8 +33962,17 @@ function ContextProvider(props) {
   const [count, setCount] = (0, _react.useState)(0);
   const [newSongs, setNewSongs] = (0, _react.useState)('');
   (0, _react.useEffect)(() => {
-    setSongs(_SongsData.default);
+    const lsSongs = JSON.parse(localStorage.getItem('songs'));
+    lsSongs ? setSongs(lsSongs) : setSongs(_SongsData.default);
+    const lsCartItems = JSON.parse(localStorage.getItem('cartItems'));
+    lsCartItems && setCartItems(lsCartItems);
   }, []);
+  (0, _react.useEffect)(() => {
+    localStorage.setItem('songs', JSON.stringify(songs));
+  }, [songs]);
+  (0, _react.useEffect)(() => {
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+  }, [cartItems]);
 
   function toggleFavorite(id) {
     const newSongArray = songs.map(song => {
@@ -34536,7 +34545,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52633" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59735" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
