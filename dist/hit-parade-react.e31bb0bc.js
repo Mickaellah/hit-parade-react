@@ -37141,10 +37141,10 @@ function cartItems(cart = [], action) {
 
 var _default = (0, _redux.combineReducers)({
   getSongs,
+  cartItems,
   updateFavorite,
-  upvotes,
   newSongs,
-  cartItems
+  upvotes
 });
 
 exports.default = _default;

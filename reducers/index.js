@@ -67,8 +67,8 @@ function cartItems(cart = [], action) {
 
 export default combineReducers({
     getSongs,
+    cartItems,
     updateFavorite,
-    upvotes,
     newSongs,
-    cartItems
+    upvotes
 });
