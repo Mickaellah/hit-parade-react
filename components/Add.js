@@ -1,8 +1,6 @@
-import React, {useContext} from 'react';
-import {Context} from '../Context';
+import React from 'react';
 
-export default function Add() {
-    const {newSongs, addNewSongs} = useContext(Context);
+export default function Add({addNewSongs}) {
     return (
         <div>
             <h2>Add a new song</h2>

@@ -62,6 +62,15 @@ function votes(state= 0, action) {
 //     }
 // }
 
+function newSongs(state = SongData, action) {
+    switch(action.type) {
+        case "ADD_NEW_SONGS":
+            return [...state, action.value]
+        default:
+            return state
+    }
+}
+
 function cartItems(cart = [], action) {
     switch(action.type) {
         case "SET_CART_ITEMS":
@@ -77,6 +86,7 @@ export default combineReducers({
     cartItems,
     updateFavorite,
     votes,
+    newSongs
     // upvotes,
     // downvotes
 });
