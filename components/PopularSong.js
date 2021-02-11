@@ -1,6 +1,4 @@
-import React, {useContext} from 'react';
-
-import {Context} from '../Context';
+import React from 'react';
 import {Link} from 'react-router-dom';
 
 import favoriteOutline from '../svg/favorite_border-24px.svg';
@@ -11,20 +9,25 @@ import arrowUp from "../svg/arrow_upward-24px.svg";
 import downArrow from "../svg/arrow_downward-24px.svg";
 import lyrics from '../svg/lyrics.svg';
 
-export default function PopularSong({songs}) {
+export default function PopularSong({songs, toggleFavorite, increase, decrease}) {
+    console.log(songs.votes);
+    const lsSongs = songs.getSongs
+    const sortedSong = lsSongs.sort((songX, songY) => {
+        const ratioX = songX.upVotes - songX.downVotes;
+        const ratioY = songY.upVotes - songY.downVotes;
+        return ratioY - ratioX;
+    });
     
     return (
         <main>
-            {songs.map((song) => {
+            {sortedSong.map((song) => {
                 return (
                     <article key={song.id} className="song_cart">
                         <div>
                             {
-                                // onClick={() => toggleFavorite(song.id)}
                                 song.isFavorited === true 
-                                ? <img  src={favorite} alt="favorited"/>
-                                : <img src={favoriteOutline} alt="not favorited" />
-                                // onClick={() => toggleFavorite(song.id)}
+                                ? <img onClick={() => toggleFavorite(song.id)} src={favorite} alt="favorited"/>
+                                : <img onClick={() => toggleFavorite(song.id)} src={favoriteOutline} alt="not favorited" />
                             }
                         </div>
                         <header className="header">
@@ -33,11 +36,11 @@ export default function PopularSong({songs}) {
                         </header>
                         <div className="voting">
                             <div className="up_votes">
-                                <span>{song.upVotes}</span>
+                                <span>{songs.votes}</span>
                                 <button 
                                     className="upVotes_bttn" 
                                     id={song.id} 
-                                    // onClick={(e) => upVotesIncreament(e)}
+                                    onClick={(e) => increase(e)}
                                 >
                                     <img 
                                         id={song.id} 
@@ -48,10 +51,10 @@ export default function PopularSong({songs}) {
                                 </button>
                             </div>
                             <div className="down_votes">
-                                <span>{song.downVotes}</span>
+                                <span>{songs.votes}</span>
                                 <button 
                                     className="downVotes_bttn" 
-                                    // onClick={(e) => downVotesIncreament(e)} 
+                                    onClick={(e) => decrease(e)} 
                                     id={song.id}
                                 >
                                     <img 

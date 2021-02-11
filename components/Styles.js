@@ -1,13 +1,9 @@
 import React, {useContext} from 'react'
-import {Context} from '../Context';
-
 import {Link} from 'react-router-dom';
 
 import Headset from '../svg/headset-24px.svg';
 
 export default function Styles({songs}) {
-    console.log(songs);
-    // const {songs} = useContext(Context);
     return (
         <div>
             {songs.map(song => {

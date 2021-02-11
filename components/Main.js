@@ -12,7 +12,7 @@ import PopularSong from '../containers/PopularSong';
 import Styles from '../containers/Styles';
 import Add from './Add';
 import Cart from './Cart';
-import Lyrics from './Lyrics';
+import Lyrics from '../containers/Lyrics';
 import SongName from './SongName';
 
 function Main() {
