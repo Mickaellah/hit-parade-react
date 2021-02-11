@@ -1,11 +1,10 @@
 import {connect} from 'react-redux';
 import {songLists} from '../actions';
-import popularSong from '../components/PopularSong';
+import PopularSong from '../components/PopularSong';
 
 function mapStateToProps(state) {
-    console.log(state);
     return {
-        songs: state.songs
+        songs: state.getSongs
     }
 }
 
@@ -13,4 +12,4 @@ const mapDispatchToProps = {
     songLists,
 }
 
-export default connect(mapStateToProps, mapDispatchToProps) (popularSong);
+export default connect(mapStateToProps, mapDispatchToProps) (PopularSong);

@@ -11,21 +11,20 @@ import arrowUp from "../svg/arrow_upward-24px.svg";
 import downArrow from "../svg/arrow_downward-24px.svg";
 import lyrics from '../svg/lyrics.svg';
 
-export default function PopularSong() {
-    const context = useContext(Context);
-    const {upVotesIncreament, downVotesIncreament, toggleFavorite, addToCart} = useContext(Context);
-    const lsSongs = context.sortedSong;
-
+export default function PopularSong({songs}) {
+    
     return (
         <main>
-            {lsSongs.map((song) => {
+            {songs.map((song) => {
                 return (
                     <article key={song.id} className="song_cart">
                         <div>
                             {
+                                // onClick={() => toggleFavorite(song.id)}
                                 song.isFavorited === true 
-                                ? <img onClick={() => toggleFavorite(song.id)} src={favorite} alt="favorited"/>
-                                : <img onClick={() => toggleFavorite(song.id)} src={favoriteOutline} alt="not favorited" />
+                                ? <img  src={favorite} alt="favorited"/>
+                                : <img src={favoriteOutline} alt="not favorited" />
+                                // onClick={() => toggleFavorite(song.id)}
                             }
                         </div>
                         <header className="header">
@@ -38,7 +37,7 @@ export default function PopularSong() {
                                 <button 
                                     className="upVotes_bttn" 
                                     id={song.id} 
-                                    onClick={(e) => upVotesIncreament(e)}
+                                    // onClick={(e) => upVotesIncreament(e)}
                                 >
                                     <img 
                                         id={song.id} 
@@ -52,7 +51,7 @@ export default function PopularSong() {
                                 <span>{song.downVotes}</span>
                                 <button 
                                     className="downVotes_bttn" 
-                                    onClick={(e) => downVotesIncreament(e)} 
+                                    // onClick={(e) => downVotesIncreament(e)} 
                                     id={song.id}
                                 >
                                     <img 
@@ -66,7 +65,8 @@ export default function PopularSong() {
                         </div>
                         <div>
                             <Link to="/cart">
-                                <img onClick={() => addToCart(song)} src={shoppingCartOutline} alt="shopping cart" />
+                            {/* onClick={() => addToCart(song)} */}
+                                <img  src={shoppingCartOutline} alt="shopping cart" />
                             </Link>
                         </div>
                         <div>

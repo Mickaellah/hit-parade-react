@@ -1,7 +1,8 @@
 import {combineReducers} from 'redux';
 import state from '../state';
+import SongData from '../SongsData.json';
 
-function getSongs(songs = [], action) {
+function getSongs(songs = [...SongData], action) {
     switch(action.type) {
         case "SONG_LISTS":
             return [...state, action.value]
@@ -19,23 +20,8 @@ function cartItems(cart = [], action) {
     }
 }
 
-function getStyles(styles = [
-    "Pop",
-    "Rock",
-    "Jazz",
-    "Classic",
-    "Dance"
-], action) {
-    switch(action.type) {
-        case "SET_STYLES":
-            return [...styles, action.value]
-        default:
-            return styles
-    }
-}
 
 export default combineReducers({
     getSongs,
-    cartItems,
-    getStyles
+    cartItems
 });

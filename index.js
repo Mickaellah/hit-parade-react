@@ -7,8 +7,8 @@ import {ContextProvider} from './Context';
 import store from './store';
 
 ReactDOM.render(
-    <ContextProvider>
-        <Provider store={store}>
-            <App />
-        </Provider>
-    </ContextProvider>, document.getElementById('root'));
+    <Provider store={store}>
+        <App />
+    </Provider>
+    , document.getElementById('root')
+);
