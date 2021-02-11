@@ -36429,7 +36429,7 @@ module.exports = "/arrow_upward-24px.abfba325.svg";
 module.exports = "/arrow_downward-24px.ee6a6e28.svg";
 },{}],"svg/lyrics.svg":[function(require,module,exports) {
 module.exports = "/lyrics.1497dd2a.svg";
-},{}],"pages/PopularSong.js":[function(require,module,exports) {
+},{}],"components/PopularSong.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36528,7 +36528,7 @@ function PopularSong() {
 }
 },{"react":"node_modules/react/index.js","../Context":"Context.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../svg/favorite_border-24px.svg":"svg/favorite_border-24px.svg","../svg/favorite-24px.svg":"svg/favorite-24px.svg","../svg/shopping_cart-24px (1).svg":"svg/shopping_cart-24px (1).svg","../svg/shopping_cart-24px.svg":"svg/shopping_cart-24px.svg","../svg/arrow_upward-24px.svg":"svg/arrow_upward-24px.svg","../svg/arrow_downward-24px.svg":"svg/arrow_downward-24px.svg","../svg/lyrics.svg":"svg/lyrics.svg"}],"svg/headset-24px.svg":[function(require,module,exports) {
 module.exports = "/headset-24px.898884ab.svg";
-},{}],"pages/Styles.js":[function(require,module,exports) {
+},{}],"components/Styles.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36568,7 +36568,7 @@ function Styles() {
     }, song.style)));
   }));
 }
-},{"react":"node_modules/react/index.js","../Context":"Context.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../svg/headset-24px.svg":"svg/headset-24px.svg"}],"pages/Add.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../Context":"Context.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../svg/headset-24px.svg":"svg/headset-24px.svg"}],"components/Add.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36679,7 +36679,7 @@ function CartItem({
     className: "cart_title"
   }, /*#__PURE__*/_react.default.createElement("h3", null, item.title), /*#__PURE__*/_react.default.createElement("p", null, item.singer)), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("p", null, item.price))));
 }
-},{"react":"node_modules/react/index.js","../svg/trash.svg":"svg/trash.svg","../Context":"Context.js"}],"pages/Cart.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../svg/trash.svg":"svg/trash.svg","../Context":"Context.js"}],"components/Cart.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36721,7 +36721,7 @@ function Cart() {
     type: "button"
   }, "Buy"), /*#__PURE__*/_react.default.createElement("p", null, "Total: ", totalPrice, " Ar")));
 }
-},{"react":"node_modules/react/index.js","../Context":"Context.js","../components/CartItem":"components/CartItem.js"}],"pages/Lyrics.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../Context":"Context.js","../components/CartItem":"components/CartItem.js"}],"components/Lyrics.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36751,7 +36751,7 @@ function Lyrics() {
     className: "lyrics_container"
   }, /*#__PURE__*/_react.default.createElement("h3", null, "Lyrics"), /*#__PURE__*/_react.default.createElement("p", null, songLyrics.lyrics)));
 }
-},{"react":"node_modules/react/index.js","../Context":"Context.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"pages/SongName.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../Context":"Context.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"components/SongName.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36810,17 +36810,17 @@ var _reactRouterDom = require("react-router-dom");
 
 var _Header = _interopRequireDefault(require("../components/Header"));
 
-var _PopularSong = _interopRequireDefault(require("../pages/PopularSong"));
+var _PopularSong = _interopRequireDefault(require("./PopularSong"));
 
-var _Styles = _interopRequireDefault(require("../pages/Styles"));
+var _Styles = _interopRequireDefault(require("./Styles"));
 
-var _Add = _interopRequireDefault(require("../pages/Add"));
+var _Add = _interopRequireDefault(require("./Add"));
 
-var _Cart = _interopRequireDefault(require("../pages/Cart"));
+var _Cart = _interopRequireDefault(require("./Cart"));
 
-var _Lyrics = _interopRequireDefault(require("../pages/Lyrics"));
+var _Lyrics = _interopRequireDefault(require("./Lyrics"));
 
-var _SongName = _interopRequireDefault(require("../pages/SongName"));
+var _SongName = _interopRequireDefault(require("./SongName"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -36847,7 +36847,7 @@ function Main() {
 
 var _default = Main;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../components/Header":"components/Header.js","../pages/PopularSong":"pages/PopularSong.js","../pages/Styles":"pages/Styles.js","../pages/Add":"pages/Add.js","../pages/Cart":"pages/Cart.js","../pages/Lyrics":"pages/Lyrics.js","../pages/SongName":"pages/SongName.js"}],"App.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../components/Header":"components/Header.js","./PopularSong":"components/PopularSong.js","./Styles":"components/Styles.js","./Add":"components/Add.js","./Cart":"components/Cart.js","./Lyrics":"components/Lyrics.js","./SongName":"components/SongName.js"}],"App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36996,7 +36996,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65233" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51068" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

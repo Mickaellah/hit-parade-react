@@ -8,12 +8,12 @@ import {
 
 import Header from '../components/Header';
 
-import PopularSong from '../pages/PopularSong';
-import Styles from '../pages/Styles';
-import Add from '../pages/Add';
-import Cart from '../pages/Cart';
-import Lyrics from '../pages/Lyrics';
-import SongName from '../pages/SongName';
+import PopularSong from './PopularSong';
+import Styles from './Styles';
+import Add from './Add';
+import Cart from './Cart';
+import Lyrics from './Lyrics';
+import SongName from './SongName';
 
 function Main() {
     return (
