@@ -1,12 +1,10 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import {useParams} from 'react-router-dom';
-import {Context} from '../Context';
 
 import Headset from '../svg/headset-24px.svg';
 
-export default function SongName() {
+export default function SongName({songs}) {
     const {styleName} = useParams();
-    const {songs} = useContext(Context);
     const songName = songs.filter((song) => song.style.toLowerCase() === styleName.toLowerCase());
 
     return (

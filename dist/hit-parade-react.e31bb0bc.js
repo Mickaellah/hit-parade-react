@@ -36560,7 +36560,6 @@ var _Styles = _interopRequireDefault(require("../components/Styles"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function mapStateToProps(state) {
-  console.log(state);
   return {
     songs: state.getSongs
   };
@@ -36928,27 +36927,20 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = SongName;
 
-var _react = _interopRequireWildcard(require("react"));
+var _react = _interopRequireDefault(require("react"));
 
 var _reactRouterDom = require("react-router-dom");
-
-var _Context = require("../Context");
 
 var _headset24px = _interopRequireDefault(require("../svg/headset-24px.svg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-function SongName() {
+function SongName({
+  songs
+}) {
   const {
     styleName
   } = (0, _reactRouterDom.useParams)();
-  const {
-    songs
-  } = (0, _react.useContext)(_Context.Context);
   const songName = songs.filter(song => song.style.toLowerCase() === styleName.toLowerCase());
   return /*#__PURE__*/_react.default.createElement("div", null, songName.map(songStyle => {
     return /*#__PURE__*/_react.default.createElement("div", {
@@ -36965,7 +36957,36 @@ function SongName() {
     }, /*#__PURE__*/_react.default.createElement("h2", null, songStyle.title), /*#__PURE__*/_react.default.createElement("p", null, songStyle.singer)));
   }));
 }
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../Context":"Context.js","../svg/headset-24px.svg":"svg/headset-24px.svg"}],"components/Main.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../svg/headset-24px.svg":"svg/headset-24px.svg"}],"containers/SongName.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _reactRedux = require("react-redux");
+
+var _actions = require("../actions");
+
+var _SongName = _interopRequireDefault(require("../components/SongName"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function mapStateToProps(state) {
+  return {
+    songs: state.getSongs
+  };
+}
+
+const mapDispatchToProps = {
+  songLists: _actions.songLists
+};
+
+var _default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(_SongName.default);
+
+exports.default = _default;
+},{"react-redux":"node_modules/react-redux/es/index.js","../actions":"actions/index.js","../components/SongName":"components/SongName.js"}],"components/Main.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36989,7 +37010,7 @@ var _Cart = _interopRequireDefault(require("./Cart"));
 
 var _Lyrics = _interopRequireDefault(require("../containers/Lyrics"));
 
-var _SongName = _interopRequireDefault(require("./SongName"));
+var _SongName = _interopRequireDefault(require("../containers/SongName"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -37016,7 +37037,7 @@ function Main() {
 
 var _default = Main;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../components/Header":"components/Header.js","../containers/PopularSong":"containers/PopularSong.js","../containers/Styles":"containers/Styles.js","../containers/Add":"containers/Add.js","./Cart":"components/Cart.js","../containers/Lyrics":"containers/Lyrics.js","./SongName":"components/SongName.js"}],"App.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../components/Header":"components/Header.js","../containers/PopularSong":"containers/PopularSong.js","../containers/Styles":"containers/Styles.js","../containers/Add":"containers/Add.js","./Cart":"components/Cart.js","../containers/Lyrics":"containers/Lyrics.js","../containers/SongName":"containers/SongName.js"}],"App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {

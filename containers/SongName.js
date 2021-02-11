@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import {songLists} from '../actions';
-import Styles from '../components/Styles';
+import SongName from '../components/SongName';
 
 function mapStateToProps(state) {
     return {
@@ -12,4 +12,4 @@ const mapDispatchToProps = {
     songLists,
 }
 
-export default connect(mapStateToProps, mapDispatchToProps) (Styles);
+export default connect(mapStateToProps, mapDispatchToProps) (SongName);

@@ -13,7 +13,7 @@ import Styles from '../containers/Styles';
 import Add from '../containers/Add';
 import Cart from './Cart';
 import Lyrics from '../containers/Lyrics';
-import SongName from './SongName';
+import SongName from '../containers/SongName';
 
 function Main() {
     return (
