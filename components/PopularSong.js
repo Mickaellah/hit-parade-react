@@ -9,8 +9,7 @@ import arrowUp from "../svg/arrow_upward-24px.svg";
 import downArrow from "../svg/arrow_downward-24px.svg";
 import lyrics from '../svg/lyrics.svg';
 
-export default function PopularSong({songs, toggleFavorite, increase, decrease}) {
-    console.log(songs.votes);
+export default function PopularSong({songs, toggleFavorite, updateVotes}) {
     const lsSongs = songs.getSongs
     const sortedSong = lsSongs.sort((songX, songY) => {
         const ratioX = songX.upVotes - songX.downVotes;
@@ -36,11 +35,11 @@ export default function PopularSong({songs, toggleFavorite, increase, decrease})
                         </header>
                         <div className="voting">
                             <div className="up_votes">
-                                <span>{songs.votes}</span>
+                                <span>{song.upVotes}</span>
                                 <button 
                                     className="upVotes_bttn" 
                                     id={song.id} 
-                                    onClick={(e) => increase(e)}
+                                    onClick={(e) => updateVotes(e)}
                                 >
                                     <img 
                                         id={song.id} 
@@ -51,10 +50,10 @@ export default function PopularSong({songs, toggleFavorite, increase, decrease})
                                 </button>
                             </div>
                             <div className="down_votes">
-                                <span>{songs.votes}</span>
+                                <span>{song.downVotes}</span>
                                 <button 
                                     className="downVotes_bttn" 
-                                    onClick={(e) => decrease(e)} 
+                                    onClick={(e) => updateVotes(e)} 
                                     id={song.id}
                                 >
                                     <img 

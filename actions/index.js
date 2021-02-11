@@ -14,15 +14,9 @@ export function toggleFavorite(id) {
     }
 }
 
-export function increase() {
+export function updateVotes() {
     return {
-        type: "INCREASE"
-    }
-}
-
-export function decrease() {
-    return {
-        type: "DECREASE"
+        type: "UPDATE_VOTES"
     }
 }
 

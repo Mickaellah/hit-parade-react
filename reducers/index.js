@@ -29,38 +29,22 @@ function updateFavorite(songs = SongData, action) {
     }
 }
 
-function votes(state= 0, action) {
+
+function upvotes(state = 0, action) {
     switch(action.type) {
-        case "INCREASE":
-            return state + 1;
-        case "DECREASE":
-            return state + 1;
+        case "UPDATE_VOTES":
+            const updateUpVotes = SongData.map(song => {
+                if (song.id === action.value) {
+                    return {
+                        ...song,
+                        upVotes: song.upVotes + 1
+                    }
+            }})
+            return updateUpVotes
         default:
             return state
     }
 }
-
-// function upvotes(state = 0, action, e) {
-//     switch(action.type) {
-//         case "INCREASE":
-//             const id = e.target.id;
-//             const findId = [...state.find(song => song.id == id)];
-//             return findId.upVotes + 1;
-//         default:
-//             return state
-//     }
-// }
-
-// function downvotes(state = [...SongData], action, e) {
-//     switch(action.type) {
-//         case "DECREASE":
-//             const id = e.target.id;
-//             const findId = [...state.find(song => song.id == id)];
-//             return findId.downVotes + 1;
-//         default:
-//             return state
-//     }
-// }
 
 function newSongs(state = SongData, action) {
     switch(action.type) {
@@ -83,10 +67,8 @@ function cartItems(cart = [], action) {
 
 export default combineReducers({
     getSongs,
-    cartItems,
     updateFavorite,
-    votes,
-    newSongs
-    // upvotes,
-    // downvotes
+    upvotes,
+    newSongs,
+    cartItems
 });
