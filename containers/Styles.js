@@ -4,7 +4,7 @@ import Styles from '../components/Styles';
 
 function mapStateToProps(state) {
     return {
-        songs: state.getSongs
+        songs: state.songs
     }
 }
 

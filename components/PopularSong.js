@@ -10,8 +10,7 @@ import downArrow from "../svg/arrow_downward-24px.svg";
 import lyrics from '../svg/lyrics.svg';
 
 export default function PopularSong({songs, toggleFavorite, updateVotes}) {
-    const lsSongs = songs.getSongs
-    const sortedSong = lsSongs.sort((songX, songY) => {
+    const sortedSong = songs.sort((songX, songY) => {
         const ratioX = songX.upVotes - songX.downVotes;
         const ratioY = songY.upVotes - songY.downVotes;
         return ratioY - ratioX;

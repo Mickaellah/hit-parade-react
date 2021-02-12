@@ -2,16 +2,16 @@ import {combineReducers} from 'redux';
 import state from '../state';
 import SongData from '../SongsData.json';
 
-function getSongs(songs = SongData, action) {
+function songs(state = [], action) {
     switch(action.type) {
         case "SONG_LISTS":
             return [...state, action.value]
         default:
-            return songs
+            return state
     }
 }
 
-function updateFavorite(songs = SongData, action) {
+function updateFavorite(songs = [], action) {
     switch(action.types) {
         case "TOGGLE_FAVORITE":
             const newSongArray = songs.map(song => {
@@ -46,7 +46,7 @@ function upvotes(state = 0, action) {
     }
 }
 
-function newSongs(state = SongData, action) {
+function newSongs(state = [], action) {
     switch(action.type) {
         case "ADD_NEW_SONGS":
             return [...state, action.value]
@@ -66,7 +66,7 @@ function cartItems(cart = [], action) {
 
 
 export default combineReducers({
-    getSongs,
+    songs,
     cartItems,
     updateFavorite,
     newSongs,

@@ -5,7 +5,7 @@ import Lyrics from '../components/Lyrics';
 function mapStateToProps(state) {
     console.log(state);
     return {
-        songs: state.getSongs
+        songs: state.songs
     }
 }
 

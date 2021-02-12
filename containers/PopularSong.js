@@ -3,7 +3,7 @@ import {songLists, toggleFavorite, updateVotes} from '../actions';
 import PopularSong from '../components/PopularSong';
 function mapStateToProps(state) {
     return {
-        songs: state
+        songs: state.songs
     }
 }
 

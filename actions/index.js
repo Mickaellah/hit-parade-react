@@ -20,17 +20,22 @@ export function updateVotes() {
     }
 }
 
-export function addNewSongs(newSong= {
-    title: title.value,
-    singer: artist.value,
-    style: style.value,
-    isFavorited: false,
-    upVotes: 0,
-    downVotes: 0,
-    price: price.value + ' ' + 'Ar',
-    lyrics: lyrics.value,
-    id: Date.now()
-}) {
+export function addNewSongs(e) {
+    e.preventDefault();
+    const {title, artist, style, lyrics, price} = e.target;
+
+    const newSong = {
+        title: title.value,
+        singer: artist.value,
+        style: style.value,
+        isFavorited: false,
+        upVotes: 0,
+        downVotes: 0,
+        price: price.value + ' ' + 'Ar',
+        lyrics: lyrics.value,
+        id: Date.now()
+    }
+    console.log(newSong);
     return {
         type: "ADD_NEW_SONGS",
         value: newSong

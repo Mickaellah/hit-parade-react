@@ -4,7 +4,7 @@ import SongName from '../components/SongName';
 
 function mapStateToProps(state) {
     return {
-        songs: state.getSongs
+        songs: state.songs
     }
 }
 
