@@ -1,11 +1,11 @@
 import SongData from '../SongsData.json';
 
-export function songLists() {
-    return {
-        type: "SONG_LISTS",
-        value: SongData
-    }
-}
+// export function songLists() {
+//     return {
+//         type: "SONG_LISTS",
+//         value: SongData
+//     }
+// }
 
 export function toggleFavorite(id) {
     return {
@@ -14,9 +14,17 @@ export function toggleFavorite(id) {
     }
 }
 
-export function updateVotes() {
+export function upVotes(id) {
     return {
-        type: "UPDATE_VOTES"
+        type: "UP_VOTES",
+        value: id
+    }
+}
+
+export function downVotes(id) {
+    return {
+        type: "DOWN_VOTES",
+        value: id
     }
 }
 
@@ -46,5 +54,12 @@ export function setCartItems(cart) {
     return {
         type: "SET_CART_ITEMS",
         value: cart
+    }
+}
+
+export function addToCart(song) {
+    return {
+        type: "ADD_TO_CARD",
+        value: song
     }
 }

@@ -44,7 +44,6 @@ export default {
             "lyrics": "Angamba tsy hainao,Yeah Fa ny nataonao ihany no nahatonga anah otrizao Ny alaeloko sy ranomasoko lava Ny tomany,tanondrika nanary lamba Tsy ho adinoko angamba Nefa voamaika nataoko ny hampitraka anah Tsy nataoko ho sakana Nozakaiko ho anah irery ny mahazo anah Tsy ianao no ande ho andrasana Ref:(x2) Fa ny aty ko malala mionona e Mahay miala fa tsy mila atorona e Mahay mandrava dia mahay manorona e Tsy ela,tsy ela dia mahita solony e Ka tsy izaho anie ny ande ampivarilava anao sy ampijaly lava anao Fa misy anie vonona hitia sy hanaja anao Efa ela no niandry anao Ayeeeee Fa ny atao hoe fitia tena tsara tsy mety lany Tonga ho azy eo foana io fa aza manahy izany Ny anjara koa tsy azo terena Izay tonga eo no atrehana Rehefa voa dia manony tena a Hita avy eo izay fandehany",
             "id": "1605846002717"
         }
-    ]
-    ,
+    ],
     cartItems: []
 }

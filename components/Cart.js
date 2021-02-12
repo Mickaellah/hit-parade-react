@@ -1,9 +1,10 @@
-import React, {useContext} from 'react'
-import {Context} from '../Context';
+import React from 'react'
+import {connect} from 'react-redux';
 import CartItem from '../components/CartItem';
 
-export default function Cart() {
-    const {cartItems} = useContext(Context);
+
+function Cart({cartItems}) {
+    console.log(cartItems);
     const cartItemElement = cartItems.map(item => (
         <CartItem key={item.id} item={item} />
     ));
@@ -25,3 +26,7 @@ export default function Cart() {
         </div>
     )
 }
+
+
+export default connect((state) => ({cartItems: state.cartItems}), null) (Cart);
+

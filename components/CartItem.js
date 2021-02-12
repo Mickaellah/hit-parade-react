@@ -1,10 +1,9 @@
-import React, {useContext} from 'react';
+import React from 'react';
+import {connect} from 'react-redux';
 
 import trashIcon from '../svg/trash.svg';
-import {Context} from '../Context';
 
-export default function CartItem({item}) {
-    const {removeFromCart} = useContext(Context);
+function CartItem({item}) {
     return (
         <div>
             <article className="cart_item">
@@ -22,3 +21,5 @@ export default function CartItem({item}) {
         </div>
     )
 }
+
+export default connect((state) => ({cartItems: state.cartItems}), null) (CartItem);

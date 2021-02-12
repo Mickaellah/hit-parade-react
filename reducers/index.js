@@ -2,19 +2,10 @@ import {combineReducers} from 'redux';
 import state from '../state';
 import SongData from '../SongsData.json';
 
-function songs(state = [], action) {
+function songs(state = SongData, action) {
     switch(action.type) {
-        case "SONG_LISTS":
-            return [...state, action.value]
-        default:
-            return state
-    }
-}
-
-function updateFavorite(songs = [], action) {
-    switch(action.types) {
         case "TOGGLE_FAVORITE":
-            const newSongArray = songs.map(song => {
+            return state.map(song => {
                 if (song.id === action.value) {
                     return {
                         ...song,
@@ -23,24 +14,28 @@ function updateFavorite(songs = [], action) {
                 }
                 return song;
             });
-            return newSongArray
-        default:
-            return songs
-    }
-}
-
-
-function upvotes(state = 0, action) {
-    switch(action.type) {
-        case "UPDATE_VOTES":
-            const updateUpVotes = SongData.map(song => {
-                if (song.id === action.value) {
-                    return {
-                        ...song,
-                        upVotes: song.upVotes + 1
+        case "UP_VOTES":
+            return state.map(song => {
+            if (song.id === action.value) {
+                return {
+                    ...song,
+                    upVotes: song.upVotes + 1,
+                };
+            }
+            return song
+        })
+        case "DOWN_VOTES":
+            
+            return state.map(song => {
+                    if (song.id === action.value) {
+                        return {
+                            ...song,
+                            downVotes: song.downVotes + 1
+                        };
                     }
-            }})
-            return updateUpVotes
+                    return song
+                })
+
         default:
             return state
     }
@@ -55,12 +50,14 @@ function newSongs(state = [], action) {
     }
 }
 
-function cartItems(cart = [], action) {
+function cartItems(state = [], action) {
     switch(action.type) {
         case "SET_CART_ITEMS":
-            return [...cart, action.value]
+            return [...state, action.value]
+        case "ADD_TO_CARD":
+            return [...state, action.value]
         default:
-            return cart
+            return state
     }
 }
 
@@ -68,7 +65,5 @@ function cartItems(cart = [], action) {
 export default combineReducers({
     songs,
     cartItems,
-    updateFavorite,
     newSongs,
-    upvotes
 });

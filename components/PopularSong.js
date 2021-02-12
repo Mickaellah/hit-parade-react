@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import {connect} from 'react-redux';
 
 import favoriteOutline from '../svg/favorite_border-24px.svg';
 import favorite from '../svg/favorite-24px.svg';
@@ -8,8 +9,9 @@ import shoppingCart from "../svg/shopping_cart-24px.svg";
 import arrowUp from "../svg/arrow_upward-24px.svg";
 import downArrow from "../svg/arrow_downward-24px.svg";
 import lyrics from '../svg/lyrics.svg';
+import { toggleFavorite, upVotes, downVotes, addToCart } from '../actions';
 
-export default function PopularSong({songs, toggleFavorite, updateVotes}) {
+function PopularSong({songs, toggleFavorite, upVotes, downVotes, addToCart}) {
     const sortedSong = songs.sort((songX, songY) => {
         const ratioX = songX.upVotes - songX.downVotes;
         const ratioY = songY.upVotes - songY.downVotes;
@@ -38,7 +40,7 @@ export default function PopularSong({songs, toggleFavorite, updateVotes}) {
                                 <button 
                                     className="upVotes_bttn" 
                                     id={song.id} 
-                                    onClick={(e) => updateVotes(e)}
+                                    onClick={() => upVotes(song.id)}
                                 >
                                     <img 
                                         id={song.id} 
@@ -52,7 +54,7 @@ export default function PopularSong({songs, toggleFavorite, updateVotes}) {
                                 <span>{song.downVotes}</span>
                                 <button 
                                     className="downVotes_bttn" 
-                                    onClick={(e) => updateVotes(e)} 
+                                    onClick={() => downVotes(song.id)} 
                                     id={song.id}
                                 >
                                     <img 
@@ -66,8 +68,7 @@ export default function PopularSong({songs, toggleFavorite, updateVotes}) {
                         </div>
                         <div>
                             <Link to="/cart">
-                            {/* onClick={() => addToCart(song)} */}
-                                <img  src={shoppingCartOutline} alt="shopping cart" />
+                                <img onClick={() => addToCart(song)} src={shoppingCartOutline} alt="shopping cart" />
                             </Link>
                         </div>
                         <div>
@@ -81,3 +82,12 @@ export default function PopularSong({songs, toggleFavorite, updateVotes}) {
         </main>
     )
 }
+
+const mapDispatchToProps = {
+    toggleFavorite,
+    upVotes,
+    downVotes,
+    addToCart
+}
+
+export default connect((state) => ({songs: state.songs, cartItems: state.cartItems}), mapDispatchToProps) (PopularSong);

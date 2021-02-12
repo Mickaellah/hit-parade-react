@@ -8,7 +8,7 @@ import {
 
 import Header from '../components/Header';
 
-import PopularSong from '../containers/PopularSong';
+import PopularSong from '../components/PopularSong';
 import Styles from '../containers/Styles';
 import Add from '../containers/Add';
 import Cart from './Cart';
