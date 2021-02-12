@@ -39,3 +39,10 @@ export function addToCart(song) {
         value: song
     }
 }
+
+export function removeFromCart(id) {
+    return {
+        type: "REMOVE_FROM_CARD",
+        value: id
+    }
+}

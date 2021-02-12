@@ -47,6 +47,8 @@ function cartItems(state = [], action) {
             return [...state, action.value]
         case "ADD_TO_CARD":
             return [...state, action.value]
+        case "REMOVE_FROM_CARD":
+            return state.filter(song => song.id !== action.value);
         default:
             return state
     }

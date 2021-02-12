@@ -18,8 +18,8 @@ function Add({addNewSongs}) {
             price: e.target.price.value,
             style: e.target.style.value,
             lyrics: e.target.lyrics.value,
-            upvotes: 0,
-            downvotes: 0,
+            upVotes: 0,
+            downVotes: 0,
             isFavorited: false,
         };
         addNewSongs(newSong);

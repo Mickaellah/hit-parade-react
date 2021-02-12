@@ -1,13 +1,14 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import {removeFromCart} from '../actions';
 
 import trashIcon from '../svg/trash.svg';
 
-function CartItem({item}) {
+function CartItem({item, removeFromCart}) {
     return (
         <div>
             <article className="cart_item">
-                <button className="delete_bttn" id={item.id} onClick={() => removeFromCart(item.id)}>
+                <button onClick={() => removeFromCart(item.id)} className="delete_bttn" id={item.id} onClick={() => removeFromCart(item.id)}>
                     <img id={item.id} src={trashIcon} alt="delete icon" />
                 </button>
                 <div className="cart_title">
@@ -22,4 +23,8 @@ function CartItem({item}) {
     )
 }
 
-export default connect((state) => ({cartItems: state.cartItems}), null) (CartItem);
+const mapDispatchToProps = {
+    removeFromCart,
+}
+
+export default connect((state) => ({cartItems: state.cartItems}), mapDispatchToProps) (CartItem);

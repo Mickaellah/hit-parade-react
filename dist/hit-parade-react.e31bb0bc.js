@@ -36279,6 +36279,7 @@ exports.downVotes = downVotes;
 exports.addNewSongs = addNewSongs;
 exports.setCartItems = setCartItems;
 exports.addToCart = addToCart;
+exports.removeFromCart = removeFromCart;
 
 function toggleFavorite(id) {
   return {
@@ -36319,6 +36320,13 @@ function addToCart(song) {
   return {
     type: "ADD_TO_CARD",
     value: song
+  };
+}
+
+function removeFromCart(id) {
+  return {
+    type: "REMOVE_FROM_CARD",
+    value: id
   };
 }
 },{}],"components/PopularSong.js":[function(require,module,exports) {
@@ -36537,8 +36545,8 @@ function Add({
       price: e.target.price.value,
       style: e.target.style.value,
       lyrics: e.target.lyrics.value,
-      upvotes: 0,
-      downvotes: 0,
+      upVotes: 0,
+      downVotes: 0,
       isFavorited: false
     };
     addNewSongs(newSong);
@@ -36621,16 +36629,20 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactRedux = require("react-redux");
 
+var _actions = require("../actions");
+
 var _trash = _interopRequireDefault(require("../svg/trash.svg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function CartItem({
-  item
+  item,
+  removeFromCart
 }) {
   return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("article", {
     className: "cart_item"
   }, /*#__PURE__*/_react.default.createElement("button", {
+    onClick: () => removeFromCart(item.id),
     className: "delete_bttn",
     id: item.id,
     onClick: () => removeFromCart(item.id)
@@ -36643,12 +36655,16 @@ function CartItem({
   }, /*#__PURE__*/_react.default.createElement("h3", null, item.title), /*#__PURE__*/_react.default.createElement("p", null, item.singer)), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("p", null, item.price))));
 }
 
+const mapDispatchToProps = {
+  removeFromCart: _actions.removeFromCart
+};
+
 var _default = (0, _reactRedux.connect)(state => ({
   cartItems: state.cartItems
-}), null)(CartItem);
+}), mapDispatchToProps)(CartItem);
 
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-redux":"node_modules/react-redux/es/index.js","../svg/trash.svg":"svg/trash.svg"}],"components/Cart.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-redux":"node_modules/react-redux/es/index.js","../actions":"actions/index.js","../svg/trash.svg":"svg/trash.svg"}],"components/Cart.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36667,7 +36683,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function Cart({
   cartItems
 }) {
-  console.log(cartItems);
   const cartItemElement = cartItems.map(item => /*#__PURE__*/_react.default.createElement(_CartItem.default, {
     key: item.id,
     item: item
@@ -36678,13 +36693,13 @@ function Cart({
     alert(`Your songs cost you ${totalPrice} Ar`);
   }
 
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h2", null, "Cart"), cartItemElement, /*#__PURE__*/_react.default.createElement("div", {
+  return cartItems.length ? /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h2", null, "Cart"), cartItemElement, /*#__PURE__*/_react.default.createElement("div", {
     className: "buy"
   }, /*#__PURE__*/_react.default.createElement("button", {
     onClick: () => buySongs(),
     className: "buy_bttn",
     type: "button"
-  }, "Buy"), /*#__PURE__*/_react.default.createElement("p", null, "Total: ", totalPrice, " Ar")));
+  }, "Buy"), /*#__PURE__*/_react.default.createElement("p", null, "Total: ", totalPrice, " Ar"))) : /*#__PURE__*/_react.default.createElement("p", null, "Cart is empty");
 }
 
 var _default = (0, _reactRedux.connect)(state => ({
@@ -37113,6 +37128,9 @@ function cartItems(state = [], action) {
 
     case "ADD_TO_CARD":
       return [...state, action.value];
+
+    case "REMOVE_FROM_CARD":
+      return state.filter(song => song.id !== action.value);
 
     default:
       return state;

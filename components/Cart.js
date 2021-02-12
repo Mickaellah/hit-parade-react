@@ -4,7 +4,6 @@ import CartItem from '../components/CartItem';
 
 
 function Cart({cartItems}) {
-    console.log(cartItems);
     const cartItemElement = cartItems.map(item => (
         <CartItem key={item.id} item={item} />
     ));
@@ -16,6 +15,7 @@ function Cart({cartItems}) {
     }
 
     return (
+        cartItems.length ?
         <div>
             <h2>Cart</h2>
             {cartItemElement}
@@ -24,6 +24,7 @@ function Cart({cartItems}) {
                 <p>Total: {totalPrice} Ar</p>
             </div>
         </div>
+        : <p>Cart is empty</p>
     )
 }
 
