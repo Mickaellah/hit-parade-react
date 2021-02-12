@@ -1,5 +1,4 @@
 import {combineReducers} from 'redux';
-import state from '../state';
 import SongData from '../SongsData.json';
 
 function songs(state = SongData, action) {
@@ -35,14 +34,6 @@ function songs(state = SongData, action) {
                     }
                     return song
                 })
-
-        default:
-            return state
-    }
-}
-
-function newSongs(state = [], action) {
-    switch(action.type) {
         case "ADD_NEW_SONGS":
             return [...state, action.value]
         default:
@@ -64,6 +55,5 @@ function cartItems(state = [], action) {
 
 export default combineReducers({
     songs,
-    cartItems,
-    newSongs,
+    cartItems
 });

@@ -1,10 +1,38 @@
-import React from 'react';
+import React, {useState} from 'react';
+import {connect} from 'react-redux';
+import {addNewSongs} from '../actions';
 
-export default function Add({addNewSongs}) {
+function Add({addNewSongs}) {
+    const [title, setTitle] = useState("");
+    const [singer, setSinger] = useState("");
+    const [price, setPrice] = useState(0);
+    const [style, setStyle] = useState("");
+    const [lyrics, setLyrics] = useState("");
+
+    function handleSubmit(e) {
+        e.preventDefault();
+        const newSong = {
+            id: Date.now(),
+            title: e.target.title.value,
+            singer: e.target.artist.value,
+            price: e.target.price.value,
+            style: e.target.style.value,
+            lyrics: e.target.lyrics.value,
+            upvotes: 0,
+            downvotes: 0,
+            isFavorited: false,
+        };
+        addNewSongs(newSong);
+    setTitle("");
+    setSinger("");
+    setPrice(0);
+    setStyle("");
+    setLyrics("");
+    }
     return (
         <div>
             <h2>Add a new song</h2>
-            <form onSubmit={addNewSongs} className="add_form">
+            <form onSubmit={handleSubmit} className="add_form">
                 <div className="input_container">
                     <input id="title" type="text" name="title" placeholder="Title" required/>
                     <input id="artist" type="text" name="artist" placeholder="Artist" required />
@@ -26,3 +54,9 @@ export default function Add({addNewSongs}) {
         </div>
     )
 }
+
+const mapDispatchToProps = {
+    addNewSongs,
+}
+
+export default connect((state) => ({songs: state.songs}), mapDispatchToProps) (Add);

@@ -10,7 +10,7 @@ import Header from '../components/Header';
 
 import PopularSong from '../components/PopularSong';
 import Styles from '../containers/Styles';
-import Add from '../containers/Add';
+import Add from '../components/Add';
 import Cart from './Cart';
 import Lyrics from '../containers/Lyrics';
 import SongName from '../containers/SongName';
